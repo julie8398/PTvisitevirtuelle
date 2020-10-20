@@ -35,7 +35,7 @@ var APP_DATA = {
       "infoHotspots": [
         {
           "yaw": -1.1,
-          "pitch": -0.15,
+          "pitch": -2,
           "title": "Le nouvel amphi",
           "text": "Le nouvel amphi a été crée en 2018 c'est un endroit fondamentale de la vie Centralienne&nbsp;<br>BLABLABLA"
         },
@@ -73,6 +73,43 @@ var APP_DATA = {
     {
       "id": "2-milan",
       "name": "Milan",
+      "levels": [
+          {
+            "tileSize": 256,
+            "size": 256,
+            "fallbackOnly": true
+          },
+          {
+            "tileSize": 512,
+            "size": 512
+          }
+        ],
+        "faceSize": 5000,
+        "initialViewParameters": {
+          "pitch": 0,
+          "yaw": 0,
+          "fov": 1.2,
+        },
+        "linkHotspots": [   
+          {
+          "yaw": 0.6870784343848602,
+          "pitch": -0.14037612784669307,
+          "rotation": 0.7853981633974483,
+          "target": "1-balcon"
+        }
+      ],
+        "infoHotspots": [
+        {          
+        "yaw": -1.1734860226828978,
+        "pitch": 0.017285182985926184,
+        "title": "Le nouvel amphi",
+        "text": "Le nouvel amphi a été crée en 2018 c'est un endroit fondamentale de la vie Centralienne&nbsp;<br>BLABLABLA"
+        }
+      ],
+    },
+    {
+      "id": "3-360-aplati",
+      "name": "360-aplati",
       "levels": [
           {
             "tileSize": 256,
