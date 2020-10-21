@@ -29,11 +29,7 @@
   var sceneListToggleElement = document.querySelector('#sceneListToggle');
   var autorotateToggleElement = document.querySelector('#autorotateToggle');
   var fullscreenToggleElement = document.querySelector('#fullscreenToggle');
-  var Elementaflouter=document.querySelector("#pano");
-  var Boutonaflouter=document.querySelector("#bouton");
-  
-  showSceneList()
-  
+
   // Detect desktop or mobile mode.
   if (window.matchMedia) {
     var setMode = function() {
@@ -64,8 +60,6 @@
     document.body.classList.add('tooltip-fallback');
   }
 
-
-    
   // Viewer options.
   var viewerOpts = {
     controls: {
@@ -146,13 +140,10 @@
   // Set handler for scene list toggle.
   sceneListToggleElement.addEventListener('click', toggleSceneList);
 
-
   // Start with the scene list open on desktop.
   if (!document.body.classList.contains('mobile')) {
-    hideSceneList();
+    showSceneList();
   }
-
-
 
   // Set handler for scene switch.
   scenes.forEach(function(scene) {
@@ -218,22 +209,16 @@
   function showSceneList() {
     sceneListElement.classList.add('enabled');
     sceneListToggleElement.classList.add('enabled');
-    Elementaflouter.classList.remove('flou');
-    Boutonaflouter.classList.remove('flou');
   }
 
   function hideSceneList() {
     sceneListElement.classList.remove('enabled');
     sceneListToggleElement.classList.remove('enabled');
-    Elementaflouter.classList.add('flou');
-    Boutonaflouter.classList.add('flou');
   }
 
   function toggleSceneList() {
     sceneListElement.classList.toggle('enabled');
     sceneListToggleElement.classList.toggle('enabled');
-    Elementaflouter.classList.toggle('flou');
-    Boutonaflouter.classList.toggle('flou');
   }
 
   function startAutorotate() {
