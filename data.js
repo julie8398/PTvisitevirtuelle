@@ -35,7 +35,7 @@ var APP_DATA = {
       "infoHotspots": [
         {
           "yaw": -1.1,
-          "pitch": -2,
+          "pitch": -0.15,
           "title": "Le nouvel amphi",
           "text": "Le nouvel amphi a été crée en 2018 c'est un endroit fondamentale de la vie Centralienne&nbsp;<br>BLABLABLA"
         },
