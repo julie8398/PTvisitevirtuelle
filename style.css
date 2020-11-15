@@ -92,7 +92,7 @@ h1
 /* la barre du haut avec le nom de l'image*/
 #titleBar .sceneName {
   line-height: 30px; /* interligne */
-  background-color:#22a0a3;
+  background-color: #22a0a3;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
