@@ -17,7 +17,7 @@
 }
 
 :root{
-  --main_color: #a32287; /*fond scene principale (#titleBar .sceneName), fond du "menu" (#sceneListToggle), fond du haut de la bulle info (.info-hotspot .info-hotspot-header), 
+  --main_color: #22a0a3; /*fond scene principale (#titleBar .sceneName), fond du "menu" (#sceneListToggle), fond du haut de la bulle info (.info-hotspot .info-hotspot-header), 
   fond de la croix de la bulle info (.info-hotspot .info-hotspot-close-wrapper), pareil sur mobile (.info-hotspot-modal .info-hotspot-close-wrapper et .info-hotspot-modal .info-hotspot-header) */
   
   --second_color_text:#a4c2c3;  /*text supperposé sur les fonds de seconde couleur : nom de la scene sur mobile mobile (#titleBar .sceneName), couleur du texte du menu (#sceneList), couleur du text de la bulle info 
