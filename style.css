@@ -16,6 +16,19 @@
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+:root{
+  --main_color: #22a0a3; /*fond scene principale (#titleBar .sceneName), fond du "menu" (#sceneListToggle), fond du haut de la bulle info (.info-hotspot .info-hotspot-header), 
+  fond de la croix de la bulle info (.info-hotspot .info-hotspot-close-wrapper), pareil sur mobile (.info-hotspot-modal .info-hotspot-close-wrapper et .info-hotspot-modal .info-hotspot-header) */
+  
+  --second_color_text:#a4c2c3;  /*text supperposé sur les fonds de seconde couleur : nom de la scene sur mobile mobile (#titleBar .sceneName), couleur du texte du menu (#sceneList), couleur du text de la bulle info 
+  (.info-hotspot .info-hotspot-text), couleur du text info bulle sur mobile (.info-hotspot-modal .info-hotspot-text) */
+  
+  --second_color: rgb(235, 246, 247); /*couleur fond du menu (#sceneList .scenes), couleur fond de la bulle info (.info-hotspot .info-hotspot-text)
+   barre du haut sur mobile (.mobile #titleBar .sceneName) */
+ 
+   --main_color_text:white; /*tous les autres textes */
+}
+
 #contener.enabled{
   filter: blur(20px);
 }
@@ -29,7 +42,7 @@ html, body {
   font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   background-color: #000;
-  color: #fff;
+  color:var(--main_color_text);
 }
 
 a, a:hover, a:active, a:visited {
@@ -45,54 +58,39 @@ a, a:hover, a:active, a:visited {
   height: 100%;
   overflow: hidden;
 }
-/* la barre du haut avec le nom de l'image*/
+.mobile #pano.flou{
+  filter:blur(20px);
+}
+.mobile #bouton.flou{
+  filter:blur(20px);
+}
+/* la barre du haut*/
 #titleBar {
   position: absolute;
   display: flex;
   justify-content: center;
   height: 30px;
   text-align: center;
-  
+  right: 80px;
+  left: 40px;
 }
-
+/* la barre du haut pour mobile*/
 .mobile #titleBar {
   height: 40px;
   position: absolute;
   display:flex;
   justify-content: left;
-}
-
-/* If there is a fullscreen button the title bar must make space for it */
-body.fullscreen-enabled #titleBar {
-  right: 80px;
-}
-
-.mobile #pano.flou{
-  filter:blur(20px);
-}
-
-.mobile #bouton.flou{
-  filter:blur(20px);
-}
-
-/* If there are multiple scenes the title bar must make space for the scene list toggle */
-body.multiple-scenes #titleBar {
-  left: 40px;
-}
-
-body.multiple-scenes.mobile #titleBar {
+  width: 100%;
   left: 0;
 }
-
-h1
-{
-  padding: 0px 15px 0px 15px ;
-}
-
-/* la barre du haut avec le nom de l'image*/
+/* Nom de l'image (en haut au milieu)*/
 #titleBar .sceneName {
   line-height: 30px; /* interligne */
+<<<<<<< HEAD
   background-color: #22a0a3;
+=======
+  background-color: var(--main_color);
+>>>>>>> b8c767c972e3f641476e97675de35636ec054607
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -101,109 +99,17 @@ h1
   -ms-user-select: text;
   user-select: text;
   border-radius: 10px;
+  padding: 0px 15px 0px 15px ;
 }
-
-/* nom de la scene en haut*/
+/*  Nom de l'image (en haut au milieu) pour mobile*/
 .mobile #titleBar .sceneName {
   line-height: 40px;
   width: 100vw;
-  background-color: rgb(235, 246, 247);
-  color: #a4c2c3;
+  background-color: var(--second_color);
+  color:var(--second_color_text);
   border-radius: 0;
 }
-
-#fullscreenToggle {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  background-color: rgb(103,115,131);
-  background-color: rgba(0, 110, 255, 0.8);
-}
-
-.mobile #fullscreenToggle {
-  display: none;
-  visibility: hidden;
-
-}
-
-body.fullscreen-enabled #fullscreenToggle {
-  display: none;
-}
-
-#fullscreenToggle .icon {
-  display: none;
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  width: 30px;
-  height: 30px;
-}
-
-#fullscreenToggle .icon.on {
-  display: none;
-}
-
-#fullscreenToggle .icon.off {
-  display: block;
-}
-
-#fullscreenToggle.enabled .icon.on {
-  display: block;
-}
-
-#fullscreenToggle.enabled .icon.off {
-  display: none;
-}
-
-#autorotateToggle {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 40px;
-  height: 40px;
-  padding: 5px;
-  background-color: rgb(103,115,131);
-  background-color: rgba(107, 107, 107, 0.8);
-}
-
-.mobile #autorotateToggle {
- display:none;
-}
-
-/* If there is a fullscreen button, autorotate must placed a bit to the left */
-body.fullscreen-enabled #autorotateToggle {
-  right: 40px;
-}
-
-#autorotateToggle .icon {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  width: 30px;
-  height: 30px;
-}
-
-#autorotateToggle .icon.on {
-  display: none;
-}
-
-#autorotateToggle .icon.off {
-  display: block;
-}
-
-#autorotateToggle.enabled .icon.on {
-  display: block;
-}
-
-#autorotateToggle.enabled .icon.off {
-  display: none;
-}
-/* barre menu*/
+/* bloc avec texte "menu" */
 #sceneListToggle {
   position: absolute;
   display: flex;
@@ -211,14 +117,13 @@ body.fullscreen-enabled #autorotateToggle {
   left: 0;
   width: 200px;
   height: 30px;
-  background-color: rgba(34, 160, 163);
-  background-color: rgba(34, 160, 163, 1);
+  background-color: var(--main_color);
   border-radius: 10px;
   flex-direction: column; /* direction d'affichage verticale */
   justify-content: center; 
   padding-left: 7px;
 }
-
+/*bloc avec texte "menu" pour mobile*/
 .mobile #sceneListToggle {
   width: 40%;
   height: 25px;
@@ -228,8 +133,7 @@ body.fullscreen-enabled #autorotateToggle {
   text-align: left;
   vertical-align: middle;
 }
-
-
+/*menu déroulant*/
 #sceneList {
   position: absolute;
   top: 0;
@@ -243,15 +147,13 @@ body.fullscreen-enabled #autorotateToggle {
   -webkit-transition: margin-topt 0.5s ease-in-out;
   transition: margin-top 0.5s ease-in-out;
   border-radius: 10px;
-  color: #a4c2c3;
+  color:var(--second_color_text);
 }
-
-#sceneList .scenes {
-  padding-top: 30px;
-  width: 100%;
-  background-color: rgb(235, 246, 247);
+/* menu déroulant dans le cas où le menu est ouvert*/
+#sceneList.enabled {
+  margin-left: 220px;
 }
-
+/*menu déroulant pour mobile*/
 .mobile #sceneList {
   padding-top: 50px;
   width: 70%;
@@ -259,11 +161,17 @@ body.fullscreen-enabled #autorotateToggle {
   left: 15%;
   border-radius: 10px;
 }
-
+/* menu déroulant pour mobile dans le cas où le menu est ouvert*/
 .mobile #sceneList.enabled {
   margin-left: 100%;
 }
-
+/*ensemble des blocs "scene"*/
+#sceneList .scenes {
+  padding-top: 30px;
+  width: 100%;
+  background-color:var(--second_color);
+}
+/*ensemble des blocs "scene" pour mobile*/
 .mobile #sceneList .scenes {
   height: 100%;
   position: absolute;
@@ -271,22 +179,17 @@ body.fullscreen-enabled #autorotateToggle {
   border-radius: 10px;
   padding-top:0;
 }
-
-
-#sceneList.enabled {
-  margin-left: 220px;
-}
-
+/*les blocs scenes*/
 #sceneList .scene {
   display: block;
   width: 100%;
   height: 30px;
 }
-
+/*les blocs scenes pour mobile*/
 .mobile #sceneList .scene {
   height: 40px;
 }
-
+/*texte des scenes*/
 #sceneList .scene .text {
   width: 100%;
   height: 100%;
@@ -296,25 +199,19 @@ body.fullscreen-enabled #autorotateToggle {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-
+/*texte des scenes pour mobile*/
 .mobile #sceneList .scene .text {
   line-height: 40px;
 }
-
 .no-touch #sceneList .scene:hover {
-  background-color: rgb(0, 0, 0);
+  background-color:#ffffff;;
 }
-
 #sceneList .scene.current {
   background-color:#ffffff;
   border-radius: 10px;
 
 }
 
-/* Hide scene list when only a single scene exists */
-body.single-scene #sceneList, body.single-scene #sceneListToggle {
-  display: none;
-}
 
 /* Link hotspot */
 
@@ -357,11 +254,8 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   padding: 8px 10px;
 
   border-radius: 5px;
-
   background-color: rgb(58,68,84);
   background-color: rgba(58,68,84,0.8);
-
-  color: #fff;
 
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -383,6 +277,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
               -webkit-transform 0.3s,
               transform 0.3s,
               opacity 0.3s;
+  
 }
 
 .mobile .link-hotspot {
@@ -435,7 +330,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   width: 40px;
   height: 40px;
   border-radius: 20px;
-  background-color:#22a0a3; /*couleur haut info bulle ordi*/
+  background-color: var(--main_color);/*couleur haut info bulle ordi*/
   cursor: pointer;
   -webkit-transition: width 0.3s ease-in-out 0.5s,
                       border-radius 0.3s ease-in-out 0.5s;
@@ -517,6 +412,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
 }
 
 .info-hotspot .info-hotspot-title {
+
   display: inline-block;
   vertical-align: middle;
 
@@ -533,7 +429,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   height: 40px;
   width: 40px;
   border-top-right-radius: 5px;
-  background-color:#22a0a3; /*couleur fond croix info bulle ordi*/
+  background-color: var(--main_color); /*couleur fond croix info bulle ordi*/
   visibility: hidden;
   -ms-transform: perspective(200px) rotateY(90deg);
   -webkit-transform: perspective(200px) rotateY(90deg);
@@ -580,8 +476,8 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   top: 40px;
   left: 0;
   padding: 10px;
-  color:#95b6b8;
-  background-color:#ebf6f7;
+  color:var(--second_color_text);
+  background-color:var(--second_color);
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
   overflow-y: auto;
@@ -663,7 +559,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   right: 20px;
   width: auto;
   height: 40px;
-  background-color:#22a0a3; /* sur tel haut de la bulle d'info*/
+  background-color: var(--main_color); /* sur tel haut de la bulle d'info*/
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-in-out 0.2s;
   transition: opacity 0.3s ease-in-out 0.2s;
@@ -720,7 +616,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   right: 0;
   width: 40px;
   height: 40px;
-  background-color:#22a0a3; /*couleur fond croix bulle d'info mobile*/
+  background-color: var(--main_color); /*couleur fond croix bulle d'info mobile*/
   cursor: pointer;
   border-top-right-radius:10px ;
   
@@ -732,16 +628,16 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   margin: 15%;
 }
 
-.info-hotspot-modal .info-hotspot-text { /* contenue bulle informative*/
+.info-hotspot-modal .info-hotspot-text { /* contenu bulle informative mobile*/
   position: absolute;
   top: 105px;
   left: 20px;
   right: 20px;
   padding: 10px;
-  background-color:#ebf6f7; /* couleur fond info bulle mobile*/
+  background-color:var(--second_color); /* couleur fond info bulle mobile*/
   overflow-y: auto;
   opacity: 0;
-  color:#95b6b8;
+  color:var(--second_color_text);
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
   border-radius: 0 0 10px 10px;
