@@ -25,7 +25,7 @@
   var panoElement = document.querySelector('#pano');
   var sceneNameElement = document.querySelector('#titleBar .sceneName');
   var sceneListElement = document.querySelector('#sceneList');
-  var sceneElements = document.querySelectorAll('#sceneList .scene');
+  var sceneElements = document.querySelectorAll('.scene');
   var sceneListToggleElement = document.querySelector('#sceneListToggle');
   var autorotateToggleElement = document.querySelector('#autorotateToggle');
   var fullscreenToggleElement = document.querySelector('#fullscreenToggle');
@@ -33,7 +33,7 @@
   var Boutonaflouter=document.querySelector("#bouton");
   
   showSceneList()
-  
+
   // Detect desktop or mobile mode.
   if (window.matchMedia) {
     var setMode = function() {
@@ -156,12 +156,15 @@
 
   // Set handler for scene switch.
   scenes.forEach(function(scene) {
-    var el = document.querySelector('#sceneList .scene[data-id="' + scene.data.id + '"]');
+    var el = document.querySelector('.sousmenu .scene[data-id="' + scene.data.id + '"]');
     el.addEventListener('click', function() {
       switchScene(scene);
+      Elementsousmenu1.style.display = "none";
+      Elementsousmenu2.style.display = "none"; 
       // On mobile, hide scene list after selecting a scene.
       if (document.body.classList.contains('mobile')) {
-        showSceneList();
+        showSceneList()
+        ;
       }
       if (!document.body.classList.contains('mobile')) {
         hideSceneList();
@@ -237,7 +240,67 @@
     sceneListToggleElement.classList.toggle('enabled');
     Elementaflouter.classList.toggle('flou');
     Boutonaflouter.classList.toggle('flou');
+
   }
+
+//afficher les sous menus
+let bouton_menu1 = document.getElementById("menu1");
+let bouton_menu2 = document.getElementById("menu2");
+let Elementsousmenu1 = document.getElementById("sousmenu1");
+let Elementsousmenu2 = document.getElementById("sousmenu2");
+Elementsousmenu1.style.display = "none";
+Elementsousmenu2.style.display = "none";
+bouton_menu1.addEventListener("click", () => {
+  if (document.body.classList.contains('mobile')){
+    if(getComputedStyle(Elementsousmenu1).display != "none" ){
+      hideSceneList();
+      Elementsousmenu1.style.display = "none";
+      Elementsousmenu2.style.display = "none";
+    }
+    else {
+      showSceneList();
+      Elementsousmenu1.style.display = "block";
+      Elementsousmenu2.style.display = "none";
+    }
+  }
+  else{
+    if(getComputedStyle(Elementsousmenu1).display != "none"){
+      Elementsousmenu1.style.display = "none";
+      Elementsousmenu2.style.display = "none";
+    } 
+    else {
+      Elementsousmenu1.style.display = "block";
+      Elementsousmenu2.style.display = "none";
+    }
+  }
+})
+
+bouton_menu2.addEventListener("click", () => {
+  if (document.body.classList.contains('mobile')){
+    if(getComputedStyle(Elementsousmenu2).display != "none" ){
+      hideSceneList();
+      Elementsousmenu2.style.display = "none";
+      Elementsousmenu1.style.display = "none";
+    }
+    else {
+      showSceneList();
+      Elementsousmenu2.style.display = "block";
+      Elementsousmenu1.style.display = "none";
+    }
+  }
+  else{
+    if(getComputedStyle(Elementsousmenu2).display != "none"){
+      Elementsousmenu2.style.display = "none";
+      Elementsousmenu1.style.display = "none";
+    } 
+    else {
+      Elementsousmenu2.style.display = "block";
+      Elementsousmenu1.style.display = "none";
+    }
+  }
+})
+
+
 
   function startAutorotate() {
     if (!autorotateToggleElement.classList.contains('enabled')) {
@@ -408,3 +471,4 @@
   switchScene(scenes[0]);
 
 })();
+

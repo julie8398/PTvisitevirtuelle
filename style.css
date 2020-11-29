@@ -64,6 +64,7 @@ a, a:hover, a:active, a:visited {
 .mobile #bouton.flou{
   filter:blur(20px);
 }
+
 /* la barre du haut*/
 #titleBar {
   position: absolute;
@@ -121,10 +122,10 @@ a, a:hover, a:active, a:visited {
 }
 /*bloc avec texte "menu" pour mobile*/
 .mobile #sceneListToggle {
-  width: 40%;
+  width: 60%;
   height: 25px;
   position: absolute;
-  left:30%;
+  left:20%;
   top:40px; /* hauteur "menu"*/
   text-align: left;
   vertical-align: middle;
@@ -136,14 +137,12 @@ a, a:hover, a:active, a:visited {
   left: -220px;
   padding-top: 0px;
   width: 200px;
-  max-height: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
   margin-left: 0;
   -webkit-transition: margin-topt 0.5s ease-in-out;
   transition: margin-top 0.5s ease-in-out;
   border-radius: 10px;
   color:var(--second_color_text);
+  background-color: var(--second_color);
 }
 /* menu déroulant dans le cas où le menu est ouvert*/
 #sceneList.enabled {
@@ -151,42 +150,69 @@ a, a:hover, a:active, a:visited {
 }
 /*menu déroulant pour mobile*/
 .mobile #sceneList {
-  padding-top: 50px;
-  width: 70%;
-  height: 60%;
-  left: 15%;
+  position: absolute;
+  left:20%;
+  width:60%;
   border-radius: 10px;
+  top:40px;
 }
 /* menu déroulant pour mobile dans le cas où le menu est ouvert*/
 .mobile #sceneList.enabled {
   margin-left: 100%;
 }
-/*ensemble des blocs "scene"*/
-#sceneList .scenes {
-  padding-top: 30px;
-  width: 100%;
-  background-color:var(--second_color);
-}
+
+#sceneList .menu {
+  position: relative;
+  padding-top:35px;
+  padding-bottom:5px;
+  }  
+
 /*ensemble des blocs "scene" pour mobile*/
-.mobile #sceneList .scenes {
-  height: 100%;
-  position: absolute;
-  top:65px; /*hauteur du menu avec les noms des lieux à visiter*/
+.mobile #sceneList .menu {
+  position: relative;/*hauteur du menu avec les noms des lieux à visiter*/
   border-radius: 10px;
-  padding-top:0;
+  padding-top:30px;
+  padding-bottom: 0;
 }
 /*les blocs scenes*/
-#sceneList .scene {
+#sceneList .titremenu {
+  position: relative;
+  margin-bottom: 3px;
   display: block;
   width: 100%;
-  height: 30px;
+  padding-left: 7px;
 }
-/*les blocs scenes pour mobile*/
-.mobile #sceneList .scene {
-  height: 40px;
+
+.mobile #sceneList .titremenu {
+  margin-bottom: 7px;
 }
-/*texte des scenes*/
-#sceneList .scene .text {
+
+
+#sousmenu1 , #sousmenu2 {
+  background-color: var(--second_color);
+  color:var(--second_color_text);
+  position: absolute;
+  top: 30px;
+  left: 200px;
+  border-radius: 10px;
+}
+
+
+.mobile #sousmenu1,.mobile #sousmenu2{
+  position: absolute;
+  left:20%;
+  width:60%;
+  border-radius: 10px;
+  top:40px;
+  padding-top:30px;
+  background-color: var(--second_color);
+  color:var(--second_color_text);
+  padding-bottom: 5px;
+}
+
+
+/*texte du sous menu scenes*/
+.sousmenu .scene .text {
   width: 100%;
   height: 100%;
   padding: 0 15px;
@@ -195,17 +221,20 @@ a, a:hover, a:active, a:visited {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-/*texte des scenes pour mobile*/
-.mobile #sceneList .scene .text {
-  line-height: 40px;
+
+.mobile .sousmenu .scene .text {
+line-height: 20px;
+padding: 0;
+margin-left:5px;
 }
-.no-touch #sceneList .scene:hover {
+
+
+.no-touch .sousmenu .scene:hover {
   background-color:#ffffff;;
 }
-#sceneList .scene.current {
+.sousmenu .scene.current {
   background-color:#ffffff;
   border-radius: 10px;
-
 }
 
 
