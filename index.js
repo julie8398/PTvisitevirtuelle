@@ -144,7 +144,8 @@
   }
 
   // Set handler for scene list toggle.
-  sceneListToggleElement.addEventListener('click', toggleSceneList);
+  sceneListToggleElement.addEventListener('click', () => { toggleSceneList() ; Elementsousmenu1.style.display = "none"; Elementsousmenu2.style.display = "none"} );
+
 
 
   // Start with the scene list open on desktop.
