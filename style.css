@@ -35,8 +35,8 @@
 }
 
 html, body {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   padding: 0;
   margin: 0;
   overflow: hidden;
@@ -63,8 +63,8 @@ a, a:hover, a:active, a:visited {
   top: 0;
   left: 0;
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0,0,0,.3); /*grise le fond sur tel quand ton click sur le menu*/
   opacity: 0.7;
 }
@@ -75,10 +75,10 @@ a, a:hover, a:active, a:visited {
   position: absolute;
   display: flex;
   justify-content: center;
-  height: 30px;
+  height: 4vh;
   text-align: center;
-  right: 80px;
-  left: 40px;
+  right: 5.2vw;
+  left: 2.6vw;
 }
 /* la barre du haut pour mobile*/
 .mobile #titleBar {
@@ -91,7 +91,7 @@ a, a:hover, a:active, a:visited {
 }
 /* Nom de l'image (en haut au milieu)*/
 #titleBar .sceneName {
-  line-height: 30px; /* interligne */
+  line-height: 4vh; /* interligne */
   background-color: var(--main_color);
   overflow: hidden;
   text-overflow: ellipsis;
@@ -101,11 +101,11 @@ a, a:hover, a:active, a:visited {
   -ms-user-select: text;
   user-select: text;
   border-radius: 10px;
-  padding: 0px 15px 0px 15px ;
+  padding: 0 1vw 0 1vw;
 }
 /*  Nom de l'image (en haut au milieu) pour mobile*/
 .mobile #titleBar .sceneName {
-  line-height: 40px;
+  line-height: 6vh;
   width: 100vw;
   background-color: var(--second_color);
   color:var(--second_color_text);
@@ -117,31 +117,32 @@ a, a:hover, a:active, a:visited {
   display: flex;
   top: 0;
   left: 0;
-  width: 200px;
-  height: 30px;
+  width: 13vw;
+  height: 4vh;
   background-color: var(--main_color);
   border-radius: 10px;
   flex-direction: column; /* direction d'affichage verticale */
   justify-content: center; 
-  padding-left: 7px;
+  padding-left: 0.455vw;
 }
 /*bloc avec texte "menu" pour mobile*/
 .mobile #sceneListToggle {
-  width: 60%;
+  width: 60vw;
   height: 4vh;
   position: absolute;
-  left:20%;
-  top:40px; /* hauteur "menu"*/
+  left:20vw;
+  top:6vh; /* hauteur "menu"*/
   text-align: left;
   vertical-align: middle;
+  padding-left: 2vw;
 }
 /*menu déroulant*/
 #sceneList {
   position: absolute;
   top: 0;
-  left: -220px;
+  left: -14.3vw;
   padding-top: 0px;
-  width: 200px;
+  width: 13vw;
   margin-left: 0;
   -webkit-transition: margin-topt 0.5s ease-in-out;
   transition: margin-top 0.5s ease-in-out;
@@ -151,7 +152,7 @@ a, a:hover, a:active, a:visited {
 }
 /* menu déroulant dans le cas où le menu est ouvert*/
 #sceneList.enabled {
-  margin-left: 220px;
+  margin-left: 14.3vw
 }
 /*menu déroulant pour mobile*/
 .mobile #sceneList {
@@ -168,8 +169,8 @@ a, a:hover, a:active, a:visited {
 
 #sceneList .menu {
   position: relative;
-  padding-top:35px;
-  padding-bottom:5px;
+  padding-top:4.7vh;
+  padding-bottom:0.7vh;
   }  
 
 /*ensemble des blocs "scene" pour mobile*/
@@ -181,15 +182,18 @@ a, a:hover, a:active, a:visited {
 }
 /*les blocs scenes*/
 #sceneList .titremenu {
-  position: relative;
-  margin-bottom: 3px;
+  margin-bottom: 0.4vh;
   display: block;
-  width: 100%;
-  padding-left: 7px;
+  width: 100vw;
+  padding-left: 0.455vw;
 }
 
 .mobile #sceneList .titremenu {
-  margin-bottom: 1vh;
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-left: 2vw;
+  margin-bottom: 1.2vh;
 }
 
 
@@ -197,8 +201,8 @@ a, a:hover, a:active, a:visited {
   background-color: var(--second_color);
   color:var(--second_color_text);
   position: absolute;
-  top: 30px;
-  left: 200px;
+  top: 4vh;
+  left: 13vw;
   border-radius: 10px;
 }
 
@@ -220,8 +224,8 @@ a, a:hover, a:active, a:visited {
 .sousmenu .scene .text {
   width: 100%;
   height: 100%;
-  padding: 0 15px;
-  line-height: 30px;
+  padding: 0 1vw;
+  line-height: 4vh;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -246,10 +250,10 @@ margin-left:2vw;
 /* Link hotspot */
 
 .link-hotspot { 
-  width: 60px;
-  height: 60px;
-  margin-left: -30px;
-  margin-top: -30px;
+  width: 8vh;
+  height: 8vh;
+  margin-left: -2vw;
+  margin-top: 4vh;
   opacity: 0.9;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
@@ -273,15 +277,15 @@ margin-left:2vw;
 .link-hotspot-tooltip {
   position: absolute;
   left: 100%;
-  top: 14px; /* ( 60 - (16 + 2*8) ) / 2 */
+  top: 1.9vh; /* ( 60 - (16 + 2*8) ) / 2 */
 
-  margin-left: 3px;
+  margin-left:0.2vw;
 
   font-size: 16px;
 
-  max-width: 300px;
+  max-width: 19.5vw;
 
-  padding: 8px 10px;
+  padding: 1vh 0.65vw;
 
   border-radius: 5px;
   background-color: rgb(58,68,84);
@@ -311,7 +315,7 @@ margin-left:2vw;
 }
 
 .mobile .link-hotspot {
-  top: 19px; /* ( 70 - (16 + 2*8) ) / 2 */
+  top: 2.85vh; 
 }
 
 .no-touch .link-hotspot:hover .link-hotspot-tooltip {
@@ -374,7 +378,7 @@ margin-left:2vw;
 }
 
 .desktop.no-touch .info-hotspot .info-hotspot-header:hover {
-  width: 260px;
+  width: 16.9vw;
   border-radius: 5px;
   -webkit-transition: width 0.3s ease-in-out,
                       border-radius 0.3s ease-in-out;
@@ -690,9 +694,9 @@ margin-left:2vw;
   position: absolute;
   bottom: 0;
   left: 50%;
-  width: 40px;
-  height: 40px;
-  padding: 5px;
+  width: 2.6vw;
+  height: 5.3vh;
+  padding: 0.7vh;
 }
 
 body.view-control-buttons .viewControlButton {
@@ -701,55 +705,85 @@ body.view-control-buttons .viewControlButton {
 
 .viewControlButton .icon {
   position: absolute;
-  top: 5px;
-  right: 5px;
-  width: 40px;
-  height: 40px;
+  top: 0.7vh;
+  right: 0.3vw;
+  width: 5.5vh;
+  height: 5.5vh;
 }
 
 /* Center is at margin-left: -20px */
 
 /* bouton up */
 .viewControlButton-1 {
-  margin-left: 85vh;
-  margin-bottom: 14vh;
+  margin-left: 41.4375vw;
+  margin-bottom: 6.825vw;
 }
 /* bouton down*/
 .viewControlButton-2 {
-  margin-left: 85vh;
-  margin-bottom: 2vh;
+  margin-left: 41.4375vw;
+  margin-bottom: 0.975vw;
 }
 /* bouton left*/
 .viewControlButton-3 {
-  margin-left: 79vh;
-  margin-bottom: 8vh;
+  margin-left: 38.5125vw;
+  margin-bottom: 3.9vw;
 }
 /* bouton right*/
 .viewControlButton-4 {
-  margin-left: 91vh;
-  margin-bottom: 8vh;
+  margin-left: 44.3625vw;
+  margin-bottom: 3.9vw;
 }
 /* bouton zoom*/
 .viewControlButton-5 {
-  margin-left: -45px;
-  margin-bottom: 20px;
+  margin-left: -3vw;
+  margin-bottom: 1.3vw;
 }
 /* bouton dézoom*/
 .viewControlButton-6 {
-  margin-left: 5px;
-  margin-bottom: 20px;
+  margin-left: 0.325vw;
+  margin-bottom: 1.3vw;
 }
 
 
+
 /* mobile*/
-@media (max-width: 600px) {
+@media (max-width: 1170px) {
 body.fullscreen-enabled #titleBar {
     right: 0;
   }
 
+.viewControlButton {
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding:0;
+    margin:0;
+  }
+  
+  .viewControlButton .icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6vh;
+    height: 6vh;
+    padding:0;
+    margin:0;
+  }
+
 #bouton {
-width: 7vw;
-height: 7vw;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left:5vw;
+  bottom:2vh;
+  width: 90%;
+  height: 7vh;
+  padding-right:10vw;
+  padding-left:10vw;
+  margin:0;
 }
   
 .mobile #imgreturn {
@@ -759,36 +793,4 @@ height: 7vw;
   height: 7vw;
   width: 7vw;
 }
-
-
-  /* bouton up */
-.viewControlButton-1 {
-  margin-left: 24vw;
-  margin-bottom: 4vh;
-}
-/* bouton down*/
-.viewControlButton-2 {
-  margin-left: 12vw;
-  margin-bottom: 4vh;
-}
-/* bouton right*/
-.viewControlButton-4 {
-  margin-left: 0vw;
-  margin-bottom: 4vh;
-}
-/* bouton left*/
-.viewControlButton-3 {
-  margin-left: -12vw;
-  margin-bottom: 4vh;
-}
-/* bouton zoom*/
-.viewControlButton-5 {
-  margin-left: -24vw;
-  margin-bottom:4vh;
-}
-/* bouton dézoom*/
-.viewControlButton-6 {
-  margin-left: -36vw;
-  margin-bottom: 4vh;
-  }
 }
