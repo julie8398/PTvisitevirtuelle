@@ -31,6 +31,7 @@
   var fullscreenToggleElement = document.querySelector('#fullscreenToggle');
   var Elementaflouter=document.querySelector("#pano");
   var Boutonaflouter=document.querySelector("#bouton");
+  let Elementboutonretour=document.getElementById("return");
   
   showSceneList()
 
@@ -144,11 +145,15 @@
   }
 
   // Set handler for scene list toggle.
+
   sceneListToggleElement.addEventListener('click', () => { toggleSceneList() ; Elementsousmenu1.style.display = "none"; 
   Elementsousmenu2.style.display = "none"; 
   Elementsousmenu3.style.display = "none"; 
   Elementsousmenu4.style.display = "none"; 
   Elementsousmenu5.style.display = "none"} );
+  sceneListToggleElement.addEventListener('click', () => { toggleSceneList() ; Elementsousmenu1.style.display = "none";
+   Elementsousmenu2.style.display = "none";
+   Elementboutonretour.style.display="none";} );
 
 
 
@@ -169,6 +174,8 @@
       Elementsousmenu3.style.display = "none";
       Elementsousmenu4.style.display = "none";
       Elementsousmenu5.style.display = "none"; 
+      Elementboutonretour.style.display="none";
+      
       // On mobile, hide scene list after selecting a scene.
       if (document.body.classList.contains('mobile')) {
         showSceneList()
@@ -270,15 +277,14 @@ Elementsousmenu5.style.display = "none";
 bouton_menu1.addEventListener("click", () => {
   if (document.body.classList.contains('mobile')){
     if(getComputedStyle(Elementsousmenu1).display != "none" ){
-      hideSceneList();
       Elementsousmenu1.style.display = "none";
       Elementsousmenu2.style.display = "none";
       Elementsousmenu3.style.display = "none";
       Elementsousmenu4.style.display = "none";
       Elementsousmenu5.style.display = "none";
     }
-    else {
-      showSceneList();
+    else{
+      Elementboutonretour.style.display="block";
       Elementsousmenu1.style.display = "block";
       Elementsousmenu2.style.display = "none";
       Elementsousmenu3.style.display = "none";
@@ -286,6 +292,7 @@ bouton_menu1.addEventListener("click", () => {
       Elementsousmenu5.style.display = "none";
     }
   }
+
   if(sceneListElement.classList.contains('enabled')){
     if(getComputedStyle(Elementsousmenu1).display != "none"){
       Elementsousmenu1.style.display = "none";
@@ -294,7 +301,7 @@ bouton_menu1.addEventListener("click", () => {
       Elementsousmenu4.style.display = "none";
       Elementsousmenu5.style.display = "none";
     } 
-    else {
+    else{
       Elementsousmenu1.style.display = "block";
       Elementsousmenu2.style.display = "none";
       Elementsousmenu3.style.display = "none";
@@ -307,7 +314,6 @@ bouton_menu1.addEventListener("click", () => {
 bouton_menu2.addEventListener("click", () => {
   if (document.body.classList.contains('mobile')){
     if(getComputedStyle(Elementsousmenu2).display != "none" ){
-      hideSceneList();
       Elementsousmenu2.style.display = "none";
       Elementsousmenu1.style.display = "none";
       Elementsousmenu3.style.display = "none";
@@ -315,7 +321,7 @@ bouton_menu2.addEventListener("click", () => {
       Elementsousmenu5.style.display = "none";
     }
     else {
-      showSceneList();
+      Elementboutonretour.style.display="block";
       Elementsousmenu2.style.display = "block";
       Elementsousmenu1.style.display = "none";
       Elementsousmenu3.style.display = "none";
@@ -323,6 +329,7 @@ bouton_menu2.addEventListener("click", () => {
       Elementsousmenu5.style.display = "none";
     }
   }
+  
   if(sceneListElement.classList.contains('enabled')){
     if(getComputedStyle(Elementsousmenu2).display != "none"){
       Elementsousmenu2.style.display = "none";
@@ -331,7 +338,7 @@ bouton_menu2.addEventListener("click", () => {
       Elementsousmenu4.style.display = "none";
       Elementsousmenu5.style.display = "none";
     } 
-    else {
+    else{
       Elementsousmenu2.style.display = "block";
       Elementsousmenu1.style.display = "none";
       Elementsousmenu3.style.display = "none";
