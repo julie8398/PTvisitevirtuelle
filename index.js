@@ -261,18 +261,18 @@ bouton_menu1.addEventListener("click", () => {
       Elementsousmenu1.style.display = "none";
       Elementsousmenu2.style.display = "none";
     }
-    else {
+    else{
       Elementboutonretour.style.display="block";
       Elementsousmenu1.style.display = "block";
       Elementsousmenu2.style.display = "none";
     }
   }
-  else{
+  if (sceneListElement.classList.contains('enabled')){
     if(getComputedStyle(Elementsousmenu1).display != "none"){
       Elementsousmenu1.style.display = "none";
       Elementsousmenu2.style.display = "none";
     } 
-    else {
+    else{
       Elementsousmenu1.style.display = "block";
       Elementsousmenu2.style.display = "none";
     }
@@ -291,12 +291,12 @@ bouton_menu2.addEventListener("click", () => {
       Elementsousmenu1.style.display = "none";
     }
   }
-  else{
+  if (sceneListElement.classList.contains('enabled')){
     if(getComputedStyle(Elementsousmenu2).display != "none"){
       Elementsousmenu2.style.display = "none";
       Elementsousmenu1.style.display = "none";
     } 
-    else {
+    else{
       Elementsousmenu2.style.display = "block";
       Elementsousmenu1.style.display = "none";
     }

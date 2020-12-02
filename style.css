@@ -46,6 +46,9 @@ html, body {
   color:var(--main_color_text);
 }
 
+.mobile body{
+  font-size: 40px;
+}
 a, a:hover, a:active, a:visited {
   text-decoration: none;
   color: inherit;
@@ -458,7 +461,7 @@ margin-left:2vw;
 
 .info-hotspot .info-hotspot-close-wrapper {
   position: absolute;
-  left: 260px;
+  left: 259px;
   top: 0;
   height: 40px;
   width: 40px;
@@ -624,7 +627,7 @@ margin-left:2vw;
   right: 50px;
   width: auto;
   height: 40px;
-  padding: 0 10px;
+  padding: 0 0px;
 }
 
 .info-hotspot-modal .info-hotspot-title-wrapper:before {
