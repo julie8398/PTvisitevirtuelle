@@ -303,6 +303,13 @@ bouton_menu2.addEventListener("click", () => {
   }
 })
 
+Elementboutonretour.addEventListener("click", () => {
+  if (document.body.classList.contains('mobile')){
+      Elementsousmenu2.style.display = "none";
+      Elementsousmenu1.style.display = "none";
+      Elementboutonretour.style.display="none";
+    }
+  })
 
 
   function startAutorotate() {
