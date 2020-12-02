@@ -30,7 +30,8 @@
 }
 
 #contener.enabled{
-  filter: blur(20px);
+  background-color: rgba(0,0,0,.3); /*grise le fond sur tel quand ton click sur une bulle d'info*/
+  opacity: 0.7;
 }
 
 html, body {
@@ -54,16 +55,20 @@ a, a:hover, a:active, a:visited {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
 }
 .mobile #pano.flou{
-  filter:blur(20px);
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.3); /*grise le fond sur tel quand ton click sur le menu*/
+  opacity: 0.7;
 }
-.mobile #bouton.flou{
-  filter:blur(20px);
-}
+
 
 /* la barre du haut*/
 #titleBar {
@@ -77,7 +82,7 @@ a, a:hover, a:active, a:visited {
 }
 /* la barre du haut pour mobile*/
 .mobile #titleBar {
-  height: 40px;
+  height: 6vh;
   position: absolute;
   display:flex;
   justify-content: left;
@@ -123,7 +128,7 @@ a, a:hover, a:active, a:visited {
 /*bloc avec texte "menu" pour mobile*/
 .mobile #sceneListToggle {
   width: 60%;
-  height: 25px;
+  height: 4vh;
   position: absolute;
   left:20%;
   top:40px; /* hauteur "menu"*/
@@ -151,10 +156,10 @@ a, a:hover, a:active, a:visited {
 /*menu déroulant pour mobile*/
 .mobile #sceneList {
   position: absolute;
-  left:20%;
-  width:60%;
+  left:20vw;
+  width:60vw;
   border-radius: 10px;
-  top:40px;
+  top:6vh;
 }
 /* menu déroulant pour mobile dans le cas où le menu est ouvert*/
 .mobile #sceneList.enabled {
@@ -171,7 +176,7 @@ a, a:hover, a:active, a:visited {
 .mobile #sceneList .menu {
   position: relative;/*hauteur du menu avec les noms des lieux à visiter*/
   border-radius: 10px;
-  padding-top:30px;
+  padding-top:5vh;
   padding-bottom: 0;
 }
 /*les blocs scenes*/
@@ -184,7 +189,7 @@ a, a:hover, a:active, a:visited {
 }
 
 .mobile #sceneList .titremenu {
-  margin-bottom: 7px;
+  margin-bottom: 1vh;
 }
 
 
@@ -200,14 +205,14 @@ a, a:hover, a:active, a:visited {
 
 .mobile #sousmenu1,.mobile #sousmenu2{
   position: absolute;
-  left:20%;
-  width:60%;
+  left:20vw;
+  width:60vw;
   border-radius: 10px;
-  top:40px;
-  padding-top:30px;
+  top:6vh;
+  padding-top:5vh;
   background-color: var(--second_color);
   color:var(--second_color_text);
-  padding-bottom: 5px;
+  padding-bottom: 1vh;
 }
 
 
@@ -223,9 +228,9 @@ a, a:hover, a:active, a:visited {
 }
 
 .mobile .sousmenu .scene .text {
-line-height: 20px;
+line-height: 3vh;
 padding: 0;
-margin-left:5px;
+margin-left:2vw;
 }
 
 
@@ -255,8 +260,8 @@ margin-left:5px;
 }
 
 .mobile .link-hotspot {
-  width: 70px;
-  height: 70px;
+  width: 8vh;
+  height: 8vh;
 }
 
 .link-hotspot-icon {
@@ -706,23 +711,23 @@ body.view-control-buttons .viewControlButton {
 
 /* bouton up */
 .viewControlButton-1 {
-  margin-left: 650px;
-  margin-bottom: 90px;
+  margin-left: 85vh;
+  margin-bottom: 14vh;
 }
 /* bouton down*/
 .viewControlButton-2 {
-  margin-left: 650px;
-  margin-bottom: 10px;
+  margin-left: 85vh;
+  margin-bottom: 2vh;
 }
 /* bouton left*/
 .viewControlButton-3 {
-  margin-left: 610px;
-  margin-bottom: 50px;
+  margin-left: 79vh;
+  margin-bottom: 8vh;
 }
 /* bouton right*/
 .viewControlButton-4 {
-  margin-left: 690px;
-  margin-bottom: 50px;
+  margin-left: 91vh;
+  margin-bottom: 8vh;
 }
 /* bouton zoom*/
 .viewControlButton-5 {
@@ -745,38 +750,45 @@ body.fullscreen-enabled #titleBar {
 #bouton {
 width: 7vw;
 height: 7vw;
-padding:0;
 }
   
+.mobile #imgreturn {
+  position: absolute;
+  top: 6vh ;
+  left: 70vw;
+  height: 7vw;
+  width: 7vw;
+}
+
 
   /* bouton up */
 .viewControlButton-1 {
   margin-left: 24vw;
-  margin-bottom: 20px;
+  margin-bottom: 4vh;
 }
 /* bouton down*/
 .viewControlButton-2 {
   margin-left: 12vw;
-  margin-bottom: 20px;
+  margin-bottom: 4vh;
 }
 /* bouton right*/
 .viewControlButton-4 {
   margin-left: 0vw;
-  margin-bottom: 20px;
+  margin-bottom: 4vh;
 }
 /* bouton left*/
 .viewControlButton-3 {
   margin-left: -12vw;
-  margin-bottom: 20px;
+  margin-bottom: 4vh;
 }
 /* bouton zoom*/
 .viewControlButton-5 {
   margin-left: -24vw;
-  margin-bottom: 20px;
+  margin-bottom:4vh;
 }
 /* bouton dézoom*/
 .viewControlButton-6 {
   margin-left: -36vw;
-  margin-bottom: 20px;
+  margin-bottom: 4vh;
   }
 }

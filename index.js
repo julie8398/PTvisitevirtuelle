@@ -31,6 +31,7 @@
   var fullscreenToggleElement = document.querySelector('#fullscreenToggle');
   var Elementaflouter=document.querySelector("#pano");
   var Boutonaflouter=document.querySelector("#bouton");
+  let Elementboutonretour=document.getElementById("return");
   
   showSceneList()
 
@@ -144,7 +145,9 @@
   }
 
   // Set handler for scene list toggle.
-  sceneListToggleElement.addEventListener('click', () => { toggleSceneList() ; Elementsousmenu1.style.display = "none"; Elementsousmenu2.style.display = "none"} );
+  sceneListToggleElement.addEventListener('click', () => { toggleSceneList() ; Elementsousmenu1.style.display = "none";
+   Elementsousmenu2.style.display = "none";
+   Elementboutonretour.style.display="none";} );
 
 
 
@@ -162,6 +165,7 @@
       switchScene(scene);
       Elementsousmenu1.style.display = "none";
       Elementsousmenu2.style.display = "none"; 
+      Elementboutonretour.style.display="none";
       // On mobile, hide scene list after selecting a scene.
       if (document.body.classList.contains('mobile')) {
         showSceneList()
@@ -254,12 +258,11 @@ Elementsousmenu2.style.display = "none";
 bouton_menu1.addEventListener("click", () => {
   if (document.body.classList.contains('mobile')){
     if(getComputedStyle(Elementsousmenu1).display != "none" ){
-      hideSceneList();
       Elementsousmenu1.style.display = "none";
       Elementsousmenu2.style.display = "none";
     }
     else {
-      showSceneList();
+      Elementboutonretour.style.display="block";
       Elementsousmenu1.style.display = "block";
       Elementsousmenu2.style.display = "none";
     }
@@ -279,12 +282,11 @@ bouton_menu1.addEventListener("click", () => {
 bouton_menu2.addEventListener("click", () => {
   if (document.body.classList.contains('mobile')){
     if(getComputedStyle(Elementsousmenu2).display != "none" ){
-      hideSceneList();
       Elementsousmenu2.style.display = "none";
       Elementsousmenu1.style.display = "none";
     }
     else {
-      showSceneList();
+      Elementboutonretour.style.display="block";
       Elementsousmenu2.style.display = "block";
       Elementsousmenu1.style.display = "none";
     }
@@ -301,6 +303,13 @@ bouton_menu2.addEventListener("click", () => {
   }
 })
 
+Elementboutonretour.addEventListener("click", () => {
+  if (document.body.classList.contains('mobile')){
+      Elementsousmenu2.style.display = "none";
+      Elementsousmenu1.style.display = "none";
+      Elementboutonretour.style.display="none";
+    }
+  })
 
 
   function startAutorotate() {
