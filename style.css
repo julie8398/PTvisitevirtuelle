@@ -153,11 +153,6 @@ a, a:hover, a:active, a:visited {
   color:var(--second_color_text);
   background-color: var(--second_color);
 }
-
-#menu1:hover, #menu2:hover, #menu3:hover, #menu4:hover, #menu5:hover {
-  color:var(--main_color);
-  font-weight: bold
-}
 /* menu déroulant dans le cas où le menu est ouvert*/
 #sceneList.enabled {
   margin-left: 14.3vw
@@ -196,7 +191,6 @@ a, a:hover, a:active, a:visited {
   padding-left: 0.455vw;
 }
 
-
 .mobile #sceneList .titremenu {
   position: relative;
   display: block;
@@ -206,7 +200,7 @@ a, a:hover, a:active, a:visited {
 }
 
 
-#sousmenu1 , #sousmenu2, #sousmenu3, #sousmenu4, #sousmenu5 {
+#sousmenu1 , #sousmenu2 {
   background-color: var(--second_color);
   color:var(--second_color_text);
   position: absolute;
@@ -215,33 +209,8 @@ a, a:hover, a:active, a:visited {
   border-radius: 10px;
 }
 
-#sousmenu1 {
-  width: 11%;
-  top: 4%;
-}
 
-#sousmenu2 {
-  width: 19%;
-  top: 7%;
-}
-
-#sousmenu3 {
-  width: 10%;
-  top: 10%;
-}
-
-#sousmenu4 {
-  width: 16%;
-  top: 13%;
-}
-
-#sousmenu5 {
-  width: 7%;
-  top: 15%;
-}
-
-
-.mobile #sousmenu1,.mobile #sousmenu2, .mobile #sousmenu3, .mobile #sousmenu4, .mobile #sousmenu5 {
+.mobile #sousmenu1,.mobile #sousmenu2{
   position: absolute;
   left:20vw;
   width:60vw;
@@ -263,12 +232,6 @@ a, a:hover, a:active, a:visited {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.sousmenu .scene .text:hover{
-  color:var(--main_color);
-  font-weight: bold
-
 }
 
 .mobile .sousmenu .scene .text {

@@ -145,12 +145,6 @@
   }
 
   // Set handler for scene list toggle.
-
-  sceneListToggleElement.addEventListener('click', () => { toggleSceneList() ; Elementsousmenu1.style.display = "none"; 
-  Elementsousmenu2.style.display = "none"; 
-  Elementsousmenu3.style.display = "none"; 
-  Elementsousmenu4.style.display = "none"; 
-  Elementsousmenu5.style.display = "none"} );
   sceneListToggleElement.addEventListener('click', () => { toggleSceneList() ; Elementsousmenu1.style.display = "none";
    Elementsousmenu2.style.display = "none";
    Elementboutonretour.style.display="none";} );
@@ -171,11 +165,7 @@
       switchScene(scene);
       Elementsousmenu1.style.display = "none";
       Elementsousmenu2.style.display = "none"; 
-      Elementsousmenu3.style.display = "none";
-      Elementsousmenu4.style.display = "none";
-      Elementsousmenu5.style.display = "none"; 
       Elementboutonretour.style.display="none";
-      
       // On mobile, hide scene list after selecting a scene.
       if (document.body.classList.contains('mobile')) {
         showSceneList()
@@ -261,52 +251,30 @@
 //afficher les sous menus
 let bouton_menu1 = document.getElementById("menu1");
 let bouton_menu2 = document.getElementById("menu2");
-let bouton_menu3 = document.getElementById("menu3");
-let bouton_menu4 = document.getElementById("menu4");
-let bouton_menu5 = document.getElementById("menu5");
 let Elementsousmenu1 = document.getElementById("sousmenu1");
 let Elementsousmenu2 = document.getElementById("sousmenu2");
-let Elementsousmenu3 = document.getElementById("sousmenu3");
-let Elementsousmenu4 = document.getElementById("sousmenu4");
-let Elementsousmenu5 = document.getElementById("sousmenu5");
 Elementsousmenu1.style.display = "none";
 Elementsousmenu2.style.display = "none";
-Elementsousmenu3.style.display = "none";
-Elementsousmenu4.style.display = "none";
-Elementsousmenu5.style.display = "none";
 bouton_menu1.addEventListener("click", () => {
   if (document.body.classList.contains('mobile')){
     if(getComputedStyle(Elementsousmenu1).display != "none" ){
       Elementsousmenu1.style.display = "none";
       Elementsousmenu2.style.display = "none";
-      Elementsousmenu3.style.display = "none";
-      Elementsousmenu4.style.display = "none";
-      Elementsousmenu5.style.display = "none";
     }
     else{
       Elementboutonretour.style.display="block";
       Elementsousmenu1.style.display = "block";
       Elementsousmenu2.style.display = "none";
-      Elementsousmenu3.style.display = "none";
-      Elementsousmenu4.style.display = "none";
-      Elementsousmenu5.style.display = "none";
     }
   }
-
-  if(sceneListElement.classList.contains('enabled')){
+  if (sceneListElement.classList.contains('enabled')){
     if(getComputedStyle(Elementsousmenu1).display != "none"){
       Elementsousmenu1.style.display = "none";
       Elementsousmenu2.style.display = "none";
-      Elementsousmenu3.style.display = "none";
-      Elementsousmenu4.style.display = "none";
-      Elementsousmenu5.style.display = "none";
     } 
     else{
       Elementsousmenu1.style.display = "block";
       Elementsousmenu2.style.display = "none";
-      Elementsousmenu3.style.display = "none";
-      Elementsousmenu4.style.display = "none";
-      Elementsousmenu5.style.display = "none";
     }
   }
 })
@@ -316,148 +284,25 @@ bouton_menu2.addEventListener("click", () => {
     if(getComputedStyle(Elementsousmenu2).display != "none" ){
       Elementsousmenu2.style.display = "none";
       Elementsousmenu1.style.display = "none";
-      Elementsousmenu3.style.display = "none";
-      Elementsousmenu4.style.display = "none";
-      Elementsousmenu5.style.display = "none";
     }
     else {
       Elementboutonretour.style.display="block";
       Elementsousmenu2.style.display = "block";
       Elementsousmenu1.style.display = "none";
-      Elementsousmenu3.style.display = "none";
-      Elementsousmenu4.style.display = "none";
-      Elementsousmenu5.style.display = "none";
     }
   }
-  
-  if(sceneListElement.classList.contains('enabled')){
+  if (sceneListElement.classList.contains('enabled')){
     if(getComputedStyle(Elementsousmenu2).display != "none"){
       Elementsousmenu2.style.display = "none";
       Elementsousmenu1.style.display = "none";
-      Elementsousmenu3.style.display = "none";
-      Elementsousmenu4.style.display = "none";
-      Elementsousmenu5.style.display = "none";
     } 
     else{
       Elementsousmenu2.style.display = "block";
       Elementsousmenu1.style.display = "none";
-      Elementsousmenu3.style.display = "none";
-      Elementsousmenu4.style.display = "none";
-      Elementsousmenu5.style.display = "none";
     }
   }
 })
 
-bouton_menu3.addEventListener("click", () => {
-  if (document.body.classList.contains('mobile')){
-    if(getComputedStyle(Elementsousmenu3).display != "none" ){
-      hideSceneList();
-      Elementsousmenu2.style.display = "none";
-      Elementsousmenu1.style.display = "none";
-      Elementsousmenu3.style.display = "none";
-      Elementsousmenu4.style.display = "none";
-      Elementsousmenu5.style.display = "none";
-    }
-    else {
-      showSceneList();
-      Elementsousmenu3.style.display = "block";
-      Elementsousmenu1.style.display = "none";
-      Elementsousmenu2.style.display = "none";
-      Elementsousmenu4.style.display = "none";
-      Elementsousmenu5.style.display = "none";
-    }
-  }
-  if(sceneListElement.classList.contains('enabled')){
-    if(getComputedStyle(Elementsousmenu3).display != "none"){
-      Elementsousmenu2.style.display = "none";
-      Elementsousmenu1.style.display = "none";
-      Elementsousmenu3.style.display = "none";
-      Elementsousmenu4.style.display = "none";
-      Elementsousmenu5.style.display = "none";
-    } 
-    else {
-      Elementsousmenu3.style.display = "block";
-      Elementsousmenu1.style.display = "none";
-      Elementsousmenu2.style.display = "none";
-      Elementsousmenu4.style.display = "none";
-      Elementsousmenu5.style.display = "none";
-    }
-  }
-})
-
-bouton_menu4.addEventListener("click", () => {
-  if (document.body.classList.contains('mobile')){
-    if(getComputedStyle(Elementsousmenu4).display != "none" ){
-      hideSceneList();
-      Elementsousmenu2.style.display = "none";
-      Elementsousmenu1.style.display = "none";
-      Elementsousmenu3.style.display = "none";
-      Elementsousmenu4.style.display = "none";
-      Elementsousmenu5.style.display = "none";
-    }
-    else {
-      showSceneList();
-      Elementsousmenu4.style.display = "block";
-      Elementsousmenu1.style.display = "none";
-      Elementsousmenu3.style.display = "none";
-      Elementsousmenu2.style.display = "none";
-      Elementsousmenu5.style.display = "none";
-    }
-  }
-  if(sceneListElement.classList.contains('enabled')){
-    if(getComputedStyle(Elementsousmenu4).display != "none"){
-      Elementsousmenu2.style.display = "none";
-      Elementsousmenu1.style.display = "none";
-      Elementsousmenu3.style.display = "none";
-      Elementsousmenu4.style.display = "none";
-      Elementsousmenu5.style.display = "none";
-    } 
-    else {
-      Elementsousmenu4.style.display = "block";
-      Elementsousmenu1.style.display = "none";
-      Elementsousmenu3.style.display = "none";
-      Elementsousmenu2.style.display = "none";
-      Elementsousmenu5.style.display = "none";
-    }
-  }
-})
-
-bouton_menu5.addEventListener("click", () => {
-  if (document.body.classList.contains('mobile')){
-    if(getComputedStyle(Elementsousmenu5).display != "none" ){
-      hideSceneList();
-      Elementsousmenu2.style.display = "none";
-      Elementsousmenu1.style.display = "none";
-      Elementsousmenu3.style.display = "none";
-      Elementsousmenu4.style.display = "none";
-      Elementsousmenu5.style.display = "none";
-    }
-    else {
-      showSceneList();
-      Elementsousmenu5.style.display = "block";
-      Elementsousmenu1.style.display = "none";
-      Elementsousmenu3.style.display = "none";
-      Elementsousmenu4.style.display = "none";
-      Elementsousmenu2.style.display = "none";
-    }
-  }
-  if(sceneListElement.classList.contains('enabled')){
-    if(getComputedStyle(Elementsousmenu5).display != "none"){
-      Elementsousmenu2.style.display = "none";
-      Elementsousmenu1.style.display = "none";
-      Elementsousmenu3.style.display = "none";
-      Elementsousmenu4.style.display = "none";
-      Elementsousmenu5.style.display = "none";
-    } 
-    else {
-      Elementsousmenu5.style.display = "block";
-      Elementsousmenu1.style.display = "none";
-      Elementsousmenu3.style.display = "none";
-      Elementsousmenu4.style.display = "none";
-      Elementsousmenu2.style.display = "none";
-    }
-  }
-})
 
 
   function startAutorotate() {
