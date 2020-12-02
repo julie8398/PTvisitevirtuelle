@@ -151,9 +151,7 @@
   Elementsousmenu3.style.display = "none"; 
   Elementsousmenu4.style.display = "none"; 
   Elementsousmenu5.style.display = "none"} );
-  sceneListToggleElement.addEventListener('click', () => { toggleSceneList() ; Elementsousmenu1.style.display = "none";
-   Elementsousmenu2.style.display = "none";
-   Elementboutonretour.style.display="none";} );
+
 
 
 
