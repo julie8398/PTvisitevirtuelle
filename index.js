@@ -150,7 +150,9 @@
   Elementsousmenu2.style.display = "none"; 
   Elementsousmenu3.style.display = "none"; 
   Elementsousmenu4.style.display = "none"; 
-  Elementsousmenu5.style.display = "none"} );
+  Elementsousmenu5.style.display = "none";
+  Elementboutonretour.style.display="none";} 
+  );
 
 
 
@@ -173,6 +175,7 @@
       Elementsousmenu4.style.display = "none";
       Elementsousmenu5.style.display = "none"; 
       Elementboutonretour.style.display="none";
+
       
       // On mobile, hide scene list after selecting a scene.
       if (document.body.classList.contains('mobile')) {
@@ -184,6 +187,8 @@
       }
     });
   });
+
+
 
   // DOM elements for view controls.
   var viewUpElement = document.querySelector('#viewUp');
@@ -272,42 +277,56 @@ Elementsousmenu2.style.display = "none";
 Elementsousmenu3.style.display = "none";
 Elementsousmenu4.style.display = "none";
 Elementsousmenu5.style.display = "none";
-bouton_menu1.addEventListener("click", () => {
+Elementboutonretour.addEventListener("click", () => {
   if (document.body.classList.contains('mobile')){
-    if(getComputedStyle(Elementsousmenu1).display != "none" ){
+      Elementsousmenu2.style.display = "none";
+      Elementsousmenu3.style.display = "none";
+      Elementsousmenu4.style.display = "none";
+      Elementsousmenu5.style.display = "none";
       Elementsousmenu1.style.display = "none";
-      Elementsousmenu2.style.display = "none";
-      Elementsousmenu3.style.display = "none";
-      Elementsousmenu4.style.display = "none";
-      Elementsousmenu5.style.display = "none";
+      Elementboutonretour.style.display="none";
+      toggleSceneList()
     }
-    else{
-      Elementboutonretour.style.display="block";
-      Elementsousmenu1.style.display = "block";
-      Elementsousmenu2.style.display = "none";
-      Elementsousmenu3.style.display = "none";
-      Elementsousmenu4.style.display = "none";
-      Elementsousmenu5.style.display = "none";
-    }
-  }
+  })
 
-  if(sceneListElement.classList.contains('enabled')){
-    if(getComputedStyle(Elementsousmenu1).display != "none"){
-      Elementsousmenu1.style.display = "none";
-      Elementsousmenu2.style.display = "none";
-      Elementsousmenu3.style.display = "none";
-      Elementsousmenu4.style.display = "none";
-      Elementsousmenu5.style.display = "none";
-    } 
-    else{
-      Elementsousmenu1.style.display = "block";
-      Elementsousmenu2.style.display = "none";
-      Elementsousmenu3.style.display = "none";
-      Elementsousmenu4.style.display = "none";
-      Elementsousmenu5.style.display = "none";
+  bouton_menu1.addEventListener("click", () => {
+    if (document.body.classList.contains('mobile')){
+      if(getComputedStyle(Elementsousmenu1).display != "none" ){
+        Elementsousmenu1.style.display = "none";
+        Elementsousmenu2.style.display = "none";
+        Elementsousmenu3.style.display = "none";
+        Elementsousmenu4.style.display = "none";
+        Elementsousmenu5.style.display = "none";
+      }
+      else{
+        toggleSceneList();
+        Elementboutonretour.style.display="block";
+        Elementsousmenu1.style.display = "block";
+        Elementsousmenu2.style.display = "none";
+        Elementsousmenu3.style.display = "none";
+        Elementsousmenu4.style.display = "none";
+        Elementsousmenu5.style.display = "none";
+      }
     }
-  }
-})
+    if (!document.body.classList.contains('mobile')){
+      if(sceneListElement.classList.contains('enabled')){
+        if(getComputedStyle(Elementsousmenu1).display != "none"){
+          Elementsousmenu1.style.display = "none";
+          Elementsousmenu2.style.display = "none";
+          Elementsousmenu3.style.display = "none";
+          Elementsousmenu4.style.display = "none";
+          Elementsousmenu5.style.display = "none";
+        } 
+        else{
+          Elementsousmenu1.style.display = "block";
+          Elementsousmenu2.style.display = "none";
+          Elementsousmenu3.style.display = "none";
+          Elementsousmenu4.style.display = "none";
+          Elementsousmenu5.style.display = "none";
+        }
+      }
+    }
+  })
 
 bouton_menu2.addEventListener("click", () => {
   if (document.body.classList.contains('mobile')){
@@ -319,6 +338,7 @@ bouton_menu2.addEventListener("click", () => {
       Elementsousmenu5.style.display = "none";
     }
     else {
+      toggleSceneList();
       Elementboutonretour.style.display="block";
       Elementsousmenu2.style.display = "block";
       Elementsousmenu1.style.display = "none";
@@ -327,21 +347,22 @@ bouton_menu2.addEventListener("click", () => {
       Elementsousmenu5.style.display = "none";
     }
   }
-  
-  if(sceneListElement.classList.contains('enabled')){
-    if(getComputedStyle(Elementsousmenu2).display != "none"){
-      Elementsousmenu2.style.display = "none";
-      Elementsousmenu1.style.display = "none";
-      Elementsousmenu3.style.display = "none";
-      Elementsousmenu4.style.display = "none";
-      Elementsousmenu5.style.display = "none";
-    } 
-    else{
-      Elementsousmenu2.style.display = "block";
-      Elementsousmenu1.style.display = "none";
-      Elementsousmenu3.style.display = "none";
-      Elementsousmenu4.style.display = "none";
-      Elementsousmenu5.style.display = "none";
+  if (!document.body.classList.contains('mobile')){
+    if(sceneListElement.classList.contains('enabled')){
+      if(getComputedStyle(Elementsousmenu2).display != "none"){
+        Elementsousmenu2.style.display = "none";
+        Elementsousmenu1.style.display = "none";
+        Elementsousmenu3.style.display = "none";
+        Elementsousmenu4.style.display = "none";
+        Elementsousmenu5.style.display = "none";
+      } 
+      else{
+        Elementsousmenu2.style.display = "block";
+        Elementsousmenu1.style.display = "none";
+        Elementsousmenu3.style.display = "none";
+        Elementsousmenu4.style.display = "none";
+        Elementsousmenu5.style.display = "none";
+      }
     }
   }
 })
@@ -349,36 +370,38 @@ bouton_menu2.addEventListener("click", () => {
 bouton_menu3.addEventListener("click", () => {
   if (document.body.classList.contains('mobile')){
     if(getComputedStyle(Elementsousmenu3).display != "none" ){
-      hideSceneList();
-      Elementsousmenu2.style.display = "none";
       Elementsousmenu1.style.display = "none";
+      Elementsousmenu2.style.display = "none";
       Elementsousmenu3.style.display = "none";
       Elementsousmenu4.style.display = "none";
       Elementsousmenu5.style.display = "none";
     }
-    else {
-      showSceneList();
-      Elementsousmenu3.style.display = "block";
+    else{
+      toggleSceneList();
+      Elementboutonretour.style.display="block";
       Elementsousmenu1.style.display = "none";
       Elementsousmenu2.style.display = "none";
+      Elementsousmenu3.style.display = "block";
       Elementsousmenu4.style.display = "none";
       Elementsousmenu5.style.display = "none";
     }
   }
-  if(sceneListElement.classList.contains('enabled')){
-    if(getComputedStyle(Elementsousmenu3).display != "none"){
-      Elementsousmenu2.style.display = "none";
-      Elementsousmenu1.style.display = "none";
-      Elementsousmenu3.style.display = "none";
-      Elementsousmenu4.style.display = "none";
-      Elementsousmenu5.style.display = "none";
-    } 
-    else {
-      Elementsousmenu3.style.display = "block";
-      Elementsousmenu1.style.display = "none";
-      Elementsousmenu2.style.display = "none";
-      Elementsousmenu4.style.display = "none";
-      Elementsousmenu5.style.display = "none";
+  if (!document.body.classList.contains('mobile')){
+    if(sceneListElement.classList.contains('enabled')){
+      if(getComputedStyle(Elementsousmenu3).display != "none"){
+        Elementsousmenu1.style.display = "none";
+        Elementsousmenu2.style.display = "none";
+        Elementsousmenu3.style.display = "none";
+        Elementsousmenu4.style.display = "none";
+        Elementsousmenu5.style.display = "none";
+      } 
+      else{
+        Elementsousmenu1.style.display = "none";
+        Elementsousmenu2.style.display = "none";
+        Elementsousmenu3.style.display = "block";
+        Elementsousmenu4.style.display = "none";
+        Elementsousmenu5.style.display = "none";
+      }
     }
   }
 })
@@ -386,36 +409,38 @@ bouton_menu3.addEventListener("click", () => {
 bouton_menu4.addEventListener("click", () => {
   if (document.body.classList.contains('mobile')){
     if(getComputedStyle(Elementsousmenu4).display != "none" ){
-      hideSceneList();
-      Elementsousmenu2.style.display = "none";
       Elementsousmenu1.style.display = "none";
+      Elementsousmenu2.style.display = "none";
       Elementsousmenu3.style.display = "none";
       Elementsousmenu4.style.display = "none";
       Elementsousmenu5.style.display = "none";
     }
-    else {
-      showSceneList();
-      Elementsousmenu4.style.display = "block";
+    else{
+      toggleSceneList()
+      Elementboutonretour.style.display="block";
       Elementsousmenu1.style.display = "none";
-      Elementsousmenu3.style.display = "none";
       Elementsousmenu2.style.display = "none";
+      Elementsousmenu3.style.display = "none";
+      Elementsousmenu4.style.display = "block";
       Elementsousmenu5.style.display = "none";
     }
   }
-  if(sceneListElement.classList.contains('enabled')){
-    if(getComputedStyle(Elementsousmenu4).display != "none"){
-      Elementsousmenu2.style.display = "none";
-      Elementsousmenu1.style.display = "none";
-      Elementsousmenu3.style.display = "none";
-      Elementsousmenu4.style.display = "none";
-      Elementsousmenu5.style.display = "none";
-    } 
-    else {
-      Elementsousmenu4.style.display = "block";
-      Elementsousmenu1.style.display = "none";
-      Elementsousmenu3.style.display = "none";
-      Elementsousmenu2.style.display = "none";
-      Elementsousmenu5.style.display = "none";
+  if (!document.body.classList.contains('mobile')){
+    if(sceneListElement.classList.contains('enabled')){
+      if(getComputedStyle(Elementsousmenu4).display != "none"){
+        Elementsousmenu1.style.display = "none";
+        Elementsousmenu2.style.display = "none";
+        Elementsousmenu3.style.display = "none";
+        Elementsousmenu4.style.display = "none";
+        Elementsousmenu5.style.display = "none";
+      } 
+      else{
+        Elementsousmenu1.style.display = "none";
+        Elementsousmenu2.style.display = "none";
+        Elementsousmenu3.style.display = "none";
+        Elementsousmenu4.style.display = "block";
+        Elementsousmenu5.style.display = "none";
+      }
     }
   }
 })
@@ -423,7 +448,6 @@ bouton_menu4.addEventListener("click", () => {
 bouton_menu5.addEventListener("click", () => {
   if (document.body.classList.contains('mobile')){
     if(getComputedStyle(Elementsousmenu5).display != "none" ){
-      hideSceneList();
       Elementsousmenu2.style.display = "none";
       Elementsousmenu1.style.display = "none";
       Elementsousmenu3.style.display = "none";
@@ -431,7 +455,8 @@ bouton_menu5.addEventListener("click", () => {
       Elementsousmenu5.style.display = "none";
     }
     else {
-      showSceneList();
+      toggleSceneList()
+      Elementboutonretour.style.display="block";
       Elementsousmenu5.style.display = "block";
       Elementsousmenu1.style.display = "none";
       Elementsousmenu3.style.display = "none";
@@ -439,20 +464,22 @@ bouton_menu5.addEventListener("click", () => {
       Elementsousmenu2.style.display = "none";
     }
   }
-  if(sceneListElement.classList.contains('enabled')){
-    if(getComputedStyle(Elementsousmenu5).display != "none"){
-      Elementsousmenu2.style.display = "none";
-      Elementsousmenu1.style.display = "none";
-      Elementsousmenu3.style.display = "none";
-      Elementsousmenu4.style.display = "none";
-      Elementsousmenu5.style.display = "none";
-    } 
-    else {
-      Elementsousmenu5.style.display = "block";
-      Elementsousmenu1.style.display = "none";
-      Elementsousmenu3.style.display = "none";
-      Elementsousmenu4.style.display = "none";
-      Elementsousmenu2.style.display = "none";
+  if (!document.body.classList.contains('mobile')){
+    if(sceneListElement.classList.contains('enabled')){
+      if(getComputedStyle(Elementsousmenu5).display != "none"){
+        Elementsousmenu2.style.display = "none";
+        Elementsousmenu1.style.display = "none";
+        Elementsousmenu3.style.display = "none";
+        Elementsousmenu4.style.display = "none";
+        Elementsousmenu5.style.display = "none";
+      } 
+      else {
+        Elementsousmenu5.style.display = "block";
+        Elementsousmenu1.style.display = "none";
+        Elementsousmenu3.style.display = "none";
+        Elementsousmenu4.style.display = "none";
+        Elementsousmenu2.style.display = "none";
+      }
     }
   }
 })

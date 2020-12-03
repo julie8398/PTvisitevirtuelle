@@ -254,6 +254,7 @@ a, a:hover, a:active, a:visited {
 }
 
 
+
 /*texte du sous menu scenes*/
 .sousmenu .scene .text {
   width: 100%;
@@ -826,7 +827,7 @@ body.fullscreen-enabled #titleBar {
   margin:0;
 }
   
-.mobile #imgreturn {
+#imgreturn {
   position: absolute;
   top: 6vh ;
   left: 70vw;
