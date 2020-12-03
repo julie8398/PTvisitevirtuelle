@@ -146,12 +146,31 @@
 
   // Set handler for scene list toggle.
 
-  sceneListToggleElement.addEventListener('click', () => { toggleSceneList() ; Elementsousmenu1.style.display = "none"; 
-  Elementsousmenu2.style.display = "none"; 
-  Elementsousmenu3.style.display = "none"; 
-  Elementsousmenu4.style.display = "none"; 
-  Elementsousmenu5.style.display = "none";
-  Elementboutonretour.style.display="none";} 
+  sceneListToggleElement.addEventListener('click', () => {  
+  if (document.body.classList.contains('mobile')){
+    if (Elementsousmenu1.style.display == "block" || Elementsousmenu2.style.display == "block" ||  Elementsousmenu3.style.display == "block"||Elementsousmenu4.style.display == "block"||Elementsousmenu2.style.display == "block"){
+      Elementsousmenu1.style.display = "none"; 
+      Elementsousmenu2.style.display = "none"; 
+      Elementsousmenu3.style.display = "none"; 
+      Elementsousmenu4.style.display = "none"; 
+      Elementsousmenu5.style.display = "none";
+      Elementboutonretour.style.display="none";
+      hideSceneList();
+      }  
+    else{
+      toggleSceneList() ;
+    }
+  }
+  else{
+    toggleSceneList() ; 
+    Elementsousmenu1.style.display = "none"; 
+    Elementsousmenu2.style.display = "none"; 
+    Elementsousmenu3.style.display = "none"; 
+    Elementsousmenu4.style.display = "none"; 
+    Elementsousmenu5.style.display = "none";
+    Elementboutonretour.style.display="none";
+    }
+  }
   );
 
 
@@ -285,7 +304,8 @@ Elementboutonretour.addEventListener("click", () => {
       Elementsousmenu5.style.display = "none";
       Elementsousmenu1.style.display = "none";
       Elementboutonretour.style.display="none";
-      toggleSceneList()
+      Elementaflouter.classList.remove('flou');
+      hideSceneList()
     }
   })
 
@@ -300,6 +320,7 @@ Elementboutonretour.addEventListener("click", () => {
       }
       else{
         toggleSceneList();
+        Elementaflouter.classList.add('flou');
         Elementboutonretour.style.display="block";
         Elementsousmenu1.style.display = "block";
         Elementsousmenu2.style.display = "none";
@@ -339,6 +360,7 @@ bouton_menu2.addEventListener("click", () => {
     }
     else {
       toggleSceneList();
+      Elementaflouter.classList.add('flou');
       Elementboutonretour.style.display="block";
       Elementsousmenu2.style.display = "block";
       Elementsousmenu1.style.display = "none";
@@ -378,6 +400,7 @@ bouton_menu3.addEventListener("click", () => {
     }
     else{
       toggleSceneList();
+      Elementaflouter.classList.add('flou');
       Elementboutonretour.style.display="block";
       Elementsousmenu1.style.display = "none";
       Elementsousmenu2.style.display = "none";
@@ -417,6 +440,7 @@ bouton_menu4.addEventListener("click", () => {
     }
     else{
       toggleSceneList()
+      Elementaflouter.classList.add('flou');
       Elementboutonretour.style.display="block";
       Elementsousmenu1.style.display = "none";
       Elementsousmenu2.style.display = "none";
@@ -456,6 +480,7 @@ bouton_menu5.addEventListener("click", () => {
     }
     else {
       toggleSceneList()
+      Elementaflouter.classList.add('flou');
       Elementboutonretour.style.display="block";
       Elementsousmenu5.style.display = "block";
       Elementsousmenu1.style.display = "none";
