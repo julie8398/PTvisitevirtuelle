@@ -43,7 +43,7 @@ var APP_DATA = {
     },
     {
       "id": "1-balcon",
-      "name": "Entrée principale",
+      "name": "Entrée",
       "levels": [
         {
           "tileSize": 256,
