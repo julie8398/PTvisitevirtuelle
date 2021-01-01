@@ -1,7 +1,7 @@
 var APP_DATA = {
   "scenes": [
     {
-      "id": "0-nouvel-amphi",
+      "id": "0-newamphi-60",
       "name": "Entrée principale",
       "levels": [
         {
