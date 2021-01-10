@@ -258,6 +258,41 @@ var APP_DATA = {
         }
       ]
     },
+    {
+      "id": "6-foys10-recupere-2",
+      "name": "Foy's",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        }
+      ],
+      "faceSize": 5000,
+      "initialViewParameters": {
+        "yaw": -0.22220960032851167,
+        "pitch": -0.13085209605894121,
+        "fov": 1.3, /*1.4 est la limite pour pouvoir dézoomer en position initiale dans ce cas*/
+      },
+      "linkHotspots": [
+      ],
+      "infoHotspots": [
+        {
+          "yaw": -0.62,
+          "pitch": -0.15,
+          "title": "Le Foy's",
+          "text": "Le Foy’s est un endroit chaleureux où les étudiants peuvent se retrouver pour faire un baby foot, un billard, des jeux de sociétés... Les étudiants s’y retrouvent aussi pour de nombreux événements organisés par les diverses associations de l'école." 
+        }
+      ]
+    },
   ],
   "name": "Project Title",
   "settings": {
