@@ -35,7 +35,7 @@ var APP_DATA = {
           "yaw": 23.7,
           "pitch": -0.05,
           "rotation": 0.3,
-          "target": "3-passerelle-23"
+          "target": "1-devant-hangar"
         },
         {
           "yaw": 24.1,
@@ -54,8 +54,8 @@ var APP_DATA = {
       ]
     },
     {
-      "id": "1-balcon",
-      "name": "Entrée",
+      "id": "1-devant-hangar",
+      "name": "Entrée secondaire",
       "levels": [
         {
           "tileSize": 256,
@@ -78,6 +78,12 @@ var APP_DATA = {
         "fov": 1.3, /*1.4 est la limite pour pouvoir dézoomer en position initiale dans ce cas*/
       },
       "linkHotspots": [
+        {
+          "yaw": -4.4,
+          "pitch": 0.05,
+          "rotation": -0.2,
+          "target": "0-newamphi-60"
+        }
       ],
       "infoHotspots": [
       ]
@@ -111,7 +117,7 @@ var APP_DATA = {
           "yaw": 4.8,
           "pitch": 0.18,
           "rotation": 4.7,
-          "target": "1-balcon"
+          "target": "1-devant-hangar"
         }
       ],
       "infoHotspots": [
@@ -164,7 +170,7 @@ var APP_DATA = {
           "yaw": 24.5,
           "pitch": 0.05,
           "rotation": 0,
-          "target": "2-nouvelamphi-20"
+          "target": "5-rue_haute_antenne"
         }
       ],
       "infoHotspots": [
@@ -199,10 +205,57 @@ var APP_DATA = {
           "yaw": 3.497,
           "pitch": -0.0001,
           "rotation": 0.0001,
-          "target": "1-balcon"
+          "target": "5-rue_haute_antenne"
         }
       ],
       "infoHotspots": [
+      ]
+    },
+    {
+      "id": "5-rue_haute_antenne",
+      "name": "Rue haute 2",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        }
+      ],
+      "faceSize": 5000,
+      "initialViewParameters": {
+        "yaw": -0.22220960032851167,
+        "pitch": -0.13085209605894121,
+        "fov": 1.3, /*1.4 est la limite pour pouvoir dézoomer en position initiale dans ce cas*/
+      },
+      "linkHotspots": [
+        {
+          "yaw": 3.497,
+          "pitch": -0.1,
+          "rotation": 0.0001,
+          "target": "4-salle-de-cours-0"
+        },
+        {
+          "yaw": 5.2,
+          "pitch": -0.0001,
+          "rotation": 0.5,
+          "target": "3-passerelle-23"
+        }
+      ],
+      "infoHotspots": [
+        {
+          "yaw": 8.5,
+          "pitch": -0.2,
+          "title": "L'anTenne",
+          "text": "L’anTenne est un lieu  d'écoute et de soutien à disposition des étudiants : permanences d'une assistante sociale, information et sensibilisation aux détresses et au mal-être étudiant. C'est un espace neutre, chaleureux, pour échanger en toute confidentialité. &nbsp;<br> &nbsp;<br> Voici les services proposés par l'anTenne : &nbsp;<br> - 0 800 602 033 numéro vert gratuit : un service d’écoute et d’accompagnement psychologique accessible à distance 24 h/24 et 7 jours sur 7, permettant entre autre, des entretiens en présentiel avec des psychologues, pris en charge par Centrale Marseille. &nbsp;<br> - Des temps d'information et de prévention, animés par des professionnels (juridiques, sociaux, etc.) à l’attention des élèves et du personnel. &nbsp;<br> - L’accès à de la documentation &nbsp;<br> &nbsp;<br> Un groupe de prévention a été aussi mis en place. &nbsp;<br> Il est constitué d’une part du personnel enseignant et administratif en lien dans leur quotidien avec les élèves et, d’autre part, d’élèves représentants élus des instances et associations de l’École. Ce groupe est régulièrement formé à la détection, l’écoute et l’orientation des élèves." 
+        }
       ]
     },
   ],
