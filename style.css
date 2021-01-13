@@ -17,13 +17,13 @@
 }
 
 :root{
-  --main_color:#22a0a3; /*fond scene principale (#titleBar .sceneName), fond du "menu" (#sceneListToggle), fond du haut de la bulle info (.info-hotspot .info-hotspot-header), 
+  --main_color:#000f9f; /*fond scene principale (#titleBar .sceneName), fond du "menu" (#sceneListToggle), fond du haut de la bulle info (.info-hotspot .info-hotspot-header), 
   fond de la croix de la bulle info (.info-hotspot .info-hotspot-close-wrapper), pareil sur mobile (.info-hotspot-modal .info-hotspot-close-wrapper et .info-hotspot-modal .info-hotspot-header) */
   
-  --second_color_text:#a4c2c3;  /*text supperposé sur les fonds de seconde couleur : nom de la scene sur mobile mobile (#titleBar .sceneName), couleur du texte du menu (#sceneList), couleur du text de la bulle info 
+  --second_color_text:#4d5f80;  /*text supperposé sur les fonds de seconde couleur : nom de la scene sur mobile mobile (#titleBar .sceneName), couleur du texte du menu (#sceneList), couleur du text de la bulle info 
   (.info-hotspot .info-hotspot-text), couleur du text info bulle sur mobile (.info-hotspot-modal .info-hotspot-text) */
   
-  --second_color: rgb(235, 246, 247); /*couleur fond du menu (#sceneList .scenes), couleur fond de la bulle info (.info-hotspot .info-hotspot-text)
+  --second_color: #f2f2f2; /*couleur fond du menu (#sceneList .scenes), couleur fond de la bulle info (.info-hotspot .info-hotspot-text)
    barre du haut sur mobile (.mobile #titleBar .sceneName) */
  
    --main_color_text:white; /*tous les autres textes */
@@ -40,8 +40,8 @@ html, body {
   padding: 0;
   margin: 0;
   overflow: hidden;
-  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-family:"Conduit itc light", Helvetica, Arial, sans-serif;
+  font-size: 19px;
   background-color: #000;
   color:var(--main_color_text);
 }
@@ -95,7 +95,6 @@ a, a:hover, a:active, a:visited {
 /* Nom de l'image (en haut au milieu)*/
 #titleBar .sceneName {
   line-height: 4vh; /* interligne */
-  background-color: var(--main_color);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -104,7 +103,7 @@ a, a:hover, a:active, a:visited {
   -ms-user-select: text;
   user-select: text;
   border-radius: 10px;
-  padding: 0 1vw 0 1vw;
+  padding: 0 0vw 0 0vw;
 }
 /*  Nom de l'image (en haut au milieu) pour mobile*/
 .mobile #titleBar .sceneName {
@@ -123,7 +122,7 @@ a, a:hover, a:active, a:visited {
   width: 13vw;
   height: 4vh;
   background-color: var(--main_color);
-  border-radius: 10px;
+  border-radius: 0px;
   flex-direction: column; /* direction d'affichage verticale */
   justify-content: center; 
   padding-left: 0.455vw;
@@ -149,7 +148,7 @@ a, a:hover, a:active, a:visited {
   margin-left: 0;
   -webkit-transition: margin-topt 0.5s ease-in-out;
   transition: margin-top 0.5s ease-in-out;
-  border-radius: 10px;
+  border-radius: 0px;
   color:var(--second_color_text);
   background-color: var(--second_color);
 }
@@ -158,6 +157,11 @@ a, a:hover, a:active, a:visited {
   color:var(--main_color);
   font-weight: bold
 }
+
+.menu {
+  font-size: 16px;
+}
+
 /* menu déroulant dans le cas où le menu est ouvert*/
 #sceneList.enabled {
   margin-left: 14.3vw
@@ -212,7 +216,7 @@ a, a:hover, a:active, a:visited {
   position: absolute;
   top: 4vh;
   left: 13vw;
-  border-radius: 10px;
+  border-radius: 0px;
 }
 
 #sousmenu1 {
@@ -260,6 +264,8 @@ a, a:hover, a:active, a:visited {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  text-align: center;
+  font-size: 16px;
 }
 
 .sousmenu .scene .text:hover{
@@ -829,5 +835,10 @@ body.fullscreen-enabled #titleBar {
   left: 70vw;
   height: 7vw;
   width: 7vw;
+}
+
+#imgpunaise {
+  position: absolute;
+  z-index: 10;
 }
 }
