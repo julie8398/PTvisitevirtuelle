@@ -102,7 +102,7 @@ a, a:hover, a:active, a:visited {
   -webkit-user-select: text;
   -ms-user-select: text;
   user-select: text;
-  border-radius: 10px;
+  border-radius: 0px;
   padding: 0 0vw 0 0vw;
 }
 #imgpunaise {
@@ -116,8 +116,8 @@ a, a:hover, a:active, a:visited {
   position: absolute;
   right: 2%;
   top: 2%;
-  height: 10vh;
-  width: 26vh;
+  height: 9vh;
+  width: 25vh;
 }
 
 /*  Nom de l'image (en haut au milieu) pour mobile*/
@@ -199,7 +199,7 @@ a, a:hover, a:active, a:visited {
   position: absolute;
   left:20vw;
   width:60vw;
-  border-radius: 10px;
+  border-radius: 0px;
   top:6vh;
 }
 /* menu déroulant pour mobile dans le cas où le menu est ouvert*/
@@ -216,7 +216,7 @@ a, a:hover, a:active, a:visited {
 /*ensemble des blocs "scene" pour mobile*/
 .mobile #sceneList .menu {
   position: relative;/*hauteur du menu avec les noms des lieux à visiter*/
-  border-radius: 10px;
+  border-radius: 0px;
   padding-top:5vh;
   padding-bottom: 0;
 }
@@ -272,7 +272,7 @@ a, a:hover, a:active, a:visited {
   position: absolute;
   left:20vw;
   width:60vw;
-  border-radius: 10px;
+  border-radius: 0px;
   top:6vh;
   padding-top:5vh;
   background-color: var(--second_color);
@@ -313,7 +313,7 @@ margin-left:2vw;
 }
 .sousmenu .scene.current {
   background-color:#ffffff;
-  border-radius: 10px;
+  border-radius: 0px;
 }
 
 
@@ -357,7 +357,7 @@ margin-left:2vw;
 
   padding: 1vh 0.65vw;
 
-  border-radius: 5px;
+  border-radius: 0px;
   background-color: rgb(58,68,84);
   background-color: rgba(58,68,84,0.8);
 

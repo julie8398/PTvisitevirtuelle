@@ -83,6 +83,12 @@ var APP_DATA = {
           "pitch": 0.05,
           "rotation": -0.2,
           "target": "0-newamphi-60"
+        },
+        {
+          "yaw": 0.15,
+          "pitch": 0.2,
+          "rotation": 0,
+          "target": "8-muscu-v3"
         }
       ],
       "infoHotspots": [
@@ -247,6 +253,18 @@ var APP_DATA = {
           "pitch": -0.0001,
           "rotation": 0.5,
           "target": "3-passerelle-23"
+        },
+        {
+          "yaw": 4.75,
+          "pitch": 0,
+          "rotation": 0,
+          "target": "7-cdi-v3"
+        },
+        {
+          "yaw": 8,
+          "pitch": 0.1,
+          "rotation": 0,
+          "target": "9-rue-haute-pc-securite"
         }
       ],
       "infoHotspots": [
@@ -283,6 +301,12 @@ var APP_DATA = {
         "fov": 1.3, /*1.4 est la limite pour pouvoir dézoomer en position initiale dans ce cas*/
       },
       "linkHotspots": [
+        {
+          "yaw": 9.63,
+          "pitch": 0.1,
+          "rotation": 0,
+          "target": "9-rue-haute-pc-securite"
+        }
       ],
       "infoHotspots": [
         {
@@ -290,6 +314,129 @@ var APP_DATA = {
           "pitch": -0.15,
           "title": "Le Foy's",
           "text": "Le Foy’s est un endroit chaleureux où les étudiants peuvent se retrouver pour faire un baby foot, un billard, des jeux de sociétés... Les étudiants s’y retrouvent aussi pour de nombreux événements organisés par les diverses associations de l'école." 
+        }
+      ]
+    },
+    {
+      "id": "7-cdi-v3",
+      "name": "CDI",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        }
+      ],
+      "faceSize": 5000,
+      "initialViewParameters": {
+        "yaw": -0.22220960032851167,
+        "pitch": -0.13085209605894121,
+        "fov": 1.3, /*1.4 est la limite pour pouvoir dézoomer en position initiale dans ce cas*/
+      },
+      "linkHotspots": [
+        {
+          "yaw": 1.6,
+          "pitch": 0.2,
+          "rotation": 0,
+          "target": "5-rue_haute_antenne"
+        }
+      ],
+      "infoHotspots": [
+      ]
+    },
+    {
+      "id": "8-muscu-v3",
+      "name": "Salle de musculation",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        }
+      ],
+      "faceSize": 5000,
+      "initialViewParameters": {
+        "yaw": -0.22220960032851167,
+        "pitch": -0.13085209605894121,
+        "fov": 1.3, /*1.4 est la limite pour pouvoir dézoomer en position initiale dans ce cas*/
+      },
+      "linkHotspots": [
+        {
+          "yaw": 1.6,
+          "pitch": 0.1,
+          "rotation": 0.2,
+          "target": "1-devant-hangar"
+        }
+      ],
+      "infoHotspots": [
+        {
+          "yaw": 0.5,
+          "pitch": -0.1,
+          "title": "La salle de musculation",
+          "text": "La salle de musculation comporte de nombreux équipements qui sont à la disposition des étudiants de l’École centrale de Marseille. Des cours de sports sont aussi donnés dans cette salle : &nbsp;<br> - Tabata &nbsp;<br> - Musculation &nbsp;<br> - Step"
+        }
+      ]
+    },
+    {
+      "id": "9-rue-haute-pc-securite",
+      "name": "Rue haute 1",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        }
+      ],
+      "faceSize": 5000,
+      "initialViewParameters": {
+        "yaw": -0.22220960032851167,
+        "pitch": -0.13085209605894121,
+        "fov": 1.3, /*1.4 est la limite pour pouvoir dézoomer en position initiale dans ce cas*/
+      },
+      "linkHotspots": [
+        {
+          "yaw": 4.8,
+          "pitch": 0.2,
+          "rotation": 0,
+          "target": "5-rue_haute_antenne"
+        },
+        {
+          "yaw": 20,
+          "pitch": 0.1,
+          "rotation": 0.2,
+          "target": "6-foys10-recupere-2"
+        }
+      ],
+      "infoHotspots": [
+        {
+          "yaw": -0.2,
+          "pitch": -0.1,
+          "title": "Espace de travail",
+          "text": " Cette rue, nommée la rue 'haute' est comme la colonne vertébrale de l'établissement. De nombreux espaces de travail en extérieur ont été aménagés en 2020 à Centrale Marseille pour permettre aux étudiants d’avoir les meilleures conditions de travail possible."
         }
       ]
     },
