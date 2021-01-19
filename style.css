@@ -39,11 +39,11 @@ html, body {
   height: 100vh;
   padding: 0;
   margin: 0;
-  overflow: hidden;
   font-family:"Conduit itc light", Helvetica, Arial, sans-serif;
   font-size: 19px;
   background-color: #000;
   color:var(--main_color_text);
+  scroll-margin-block: 20px;
 }
 
 .mobile body{
@@ -584,8 +584,7 @@ margin-left:2vw;
   background-color:var(--second_color);
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
-  overflow-y: auto;
-  visibility: hidden;
+  overflow-y: scroll;
   /* rotate(90deg) causes transition flicker on Firefox 58 */
   -ms-transform: perspective(200px) rotateX(-89.999deg);
   -webkit-transform: perspective(200px) rotateX(-89.999deg);
@@ -739,7 +738,7 @@ margin-left:2vw;
   right: 20px;
   padding: 10px;
   background-color:var(--second_color); /* couleur fond info bulle mobile*/
-  overflow-y: auto;
+  overflow: scroll;
   opacity: 0;
   color:var(--second_color_text);
   -webkit-transition: opacity 0.3s ease-in-out;
@@ -833,6 +832,9 @@ body.view-control-buttons .viewControlButton {
 
 /* mobile*/
 @media (max-width: 1170px) {
+body {scroll-margin-block: 20px;}
+
+
 body.fullscreen-enabled #titleBar {
     right: 0;
   }
