@@ -878,4 +878,20 @@ body.fullscreen-enabled #titleBar {
   height: 7vw;
   width: 7vw;
 }
+
+#imgfrancais {
+  position: absolute;
+  left: 1vh;
+  top: 6vh;
+  height: 6vh;
+  width: 6vh;
+}
+
+#imganglais {
+  position: absolute;
+  left: 1vh;
+  top: 12vh;
+  height: 6vh;
+  width: 6vh;
+}
 }
