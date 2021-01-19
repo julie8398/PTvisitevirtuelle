@@ -41,7 +41,7 @@ var APP_DATA = {
           "yaw": 24.1,
           "pitch": -0.001,
           "rotation": 0,
-          "target": "2-nouvelamphi-20"
+          "target": "12-namphi16"
         }
       ],
       "infoHotspots": [
@@ -89,7 +89,13 @@ var APP_DATA = {
           "pitch": 0.2,
           "rotation": 0,
           "target": "8-muscu-v3"
-        }
+        },
+        {
+          "yaw": 5.1,
+          "pitch": 0.05,
+          "rotation": 0.2,
+          "target": "10-dojo"
+        },
       ],
       "infoHotspots": [
       ]
@@ -123,7 +129,7 @@ var APP_DATA = {
           "yaw": 4.8,
           "pitch": 0.18,
           "rotation": 4.7,
-          "target": "1-devant-hangar"
+          "target": "12-namphi16"
         }
       ],
       "infoHotspots": [
@@ -170,7 +176,7 @@ var APP_DATA = {
           "yaw": 15.1,
           "pitch": 0.2,
           "rotation": 0,
-          "target": "2-nouvelamphi-20"
+          "target": "12-namphi16"
         },
         {
           "yaw": 24.5,
@@ -429,17 +435,158 @@ var APP_DATA = {
           "pitch": 0.1,
           "rotation": 0.2,
           "target": "6-foys10-recupere-2"
-        }
+        },
+        {
+          "yaw": -2.8,
+          "pitch": 0.2,
+          "rotation": 0,
+          "target": "11-fablab"
+        },
       ],
       "infoHotspots": [
         {
           "yaw": -0.2,
           "pitch": -0.1,
           "title": "Espace de travail",
-          "text": " Cette rue, nommée la rue 'haute' est comme la colonne vertébrale de l'établissement. De nombreux espaces de travail en extérieur ont été aménagés en 2020 à Centrale Marseille pour permettre aux étudiants d’avoir les meilleures conditions de travail possible."
+          "text": "Cette rue, nommée la rue 'haute' est comme la colonne vertébrale de l'établissement. De nombreux espaces de travail en extérieur ont été aménagés en 2020 à Centrale Marseille pour permettre aux étudiants d’avoir les meilleures conditions de travail possible."
         }
       ]
     },
+    {
+      "id": "10-dojo",
+      "name": "Dojo",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        }
+      ],
+      "faceSize": 5000,
+      "initialViewParameters": {
+        "yaw": -0.22220960032851167,
+        "pitch": -0.13085209605894121,
+        "fov": 1.3, /*1.4 est la limite pour pouvoir dézoomer en position initiale dans ce cas*/
+      },
+      "linkHotspots": [
+        {
+          "yaw": 6.1,
+          "pitch": 0.2,
+          "rotation": 0,
+          "target": "1-devant-hangar"
+        }
+      ],
+      "infoHotspots": [
+        {
+          "yaw": 7,
+          "pitch": -0.1,
+          "title": "Le dojo",
+          "text": "Le dojo de Centrale Marseille a été inauguré en 2014. De nombreux sports sont pratiqués : - la boxe française &nbsp;<br> - le yoga &nbsp;<br> - les entraînements des pompoms &nbsp;<br> - le crossfit &nbsp;<br> - la zumba &nbsp;<br> &nbsp;<br> D’autres sports se font en plein air comme le football, le rugby, la randonnée, la voile et pleins d’autres encore, ou en gymnase comme le basketball, le handball…"
+        }
+      ]
+    },
+    {
+      "id": "11-fablab",
+      "name": "FabLab",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        }
+      ],
+      "faceSize": 5000,
+      "initialViewParameters": {
+        "yaw": -0.22220960032851167,
+        "pitch": -0.13085209605894121,
+        "fov": 1.3, /*1.4 est la limite pour pouvoir dézoomer en position initiale dans ce cas*/
+      },
+      "linkHotspots": [
+        {
+          "yaw": -0.2,
+          "pitch": 0.2,
+          "rotation": 0,
+          "target": "9-rue-haute-pc-securite"
+        }
+      ],
+      "infoHotspots": [
+        {
+          "yaw": 2,
+          "pitch": -0.1,
+          "title": "Le Fablab",
+          "text": "Le FabLab est un espace dédié à la créativité et au bricolage. Ouvert en 2012, il est géré par une des associations étudiantes de Centrale Marseille, mais est ouvert à tous. De nombreuses machines de haute technologie sont disponibles, comme des imprimantes 3D et des découpeuses laser permettant aux étudiants de réaliser de nombreux projets. &nbsp;<br> Chaque année des Repair Cafés et des formations sont réalisées pour apprendre à utiliser les machines et pour donner de nombreux conseils."
+        }
+      ]
+    },
+    {
+      "id": "12-namphi16",
+      "name": "Hall Nouvel Amphithéâtre",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        }
+      ],
+      "faceSize": 5000,
+      "initialViewParameters": {
+        "yaw": -0.22220960032851167,
+        "pitch": -0.13085209605894121,
+        "fov": 1.3, /*1.4 est la limite pour pouvoir dézoomer en position initiale dans ce cas*/
+      },
+      "linkHotspots": [
+        {
+          "yaw": 1.3,
+          "pitch": 0.2,
+          "rotation": 0,
+          "target": "3-passerelle-23"
+        },
+        {
+          "yaw": 4.45,
+          "pitch": 0.3,
+          "rotation": 0,
+          "target": "0-newamphi-60"
+        },
+        {
+          "yaw": 2.1,
+          "pitch": 0.2,
+          "rotation": 0,
+          "target": "2-nouvelamphi-20"
+        }
+      ],
+      "infoHotspots": [
+        {
+          "yaw": -0.2,
+          "pitch": -0.1,
+          "title": "Nouvel Amphitéâtre",
+          "text": "Le nouvel amphithéâtre de Centrale Marseille a été inauguré le 16 octobre 2019. &nbsp;<br> Il a été créé pour pouvoir accueillir une promotion entière (soit 300 élèves). &nbsp;<br> Le bâtiment est hautement connecté. Il permet donc la captation vidéo en direct du public et de la salle, l’enregistrement des enseignements et la pratique des cours à distance. Sa forme ovoïde favorise un confort optimum de vision."
+        }
+      ]
+    }
   ],
   "name": "Project Title",
   "settings": {
