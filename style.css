@@ -107,7 +107,7 @@ a, a:hover, a:active, a:visited {
 }
 #imgpunaise {
   position: absolute;
-  left: 40%;
+  left: 37%;
   height: 4vh;
   width: 4vh;
 }
@@ -814,6 +814,21 @@ body.view-control-buttons .viewControlButton {
   margin-bottom: 1.3vw;
 }
 
+#imgfrancais {
+  position: absolute;
+  left: 3vh;
+  bottom: 2vh;
+  height: 6vh;
+  width: 6vh;
+}
+
+#imganglais {
+  position: absolute;
+  left: 11vh;
+  bottom: 2vh;
+  height: 6vh;
+  width: 6vh;
+}
 
 
 /* mobile*/
@@ -858,10 +873,9 @@ body.fullscreen-enabled #titleBar {
   
 #imgreturn {
   position: absolute;
-  top: 6vh ;
+  top: 6vh;
   left: 70vw;
   height: 7vw;
   width: 7vw;
 }
-
 }
