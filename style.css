@@ -634,7 +634,7 @@ margin-left:2vw;
   position: absolute;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow: scroll;
   z-index: 11000 !important;
   background-color: rgba(0,0,0,.3); /*grise le fond sur tel quand ton click sur une bulle d'info*/
   line-height: 1.2em;
